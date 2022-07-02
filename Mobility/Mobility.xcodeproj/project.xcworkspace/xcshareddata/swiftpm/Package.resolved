@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "apiclient-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shayan18/ApiClient-iOS",
+      "state" : {
+        "branch" : "main",
+        "revision" : "43f53aeedea9de6495a0494c3a2a3ce4de6fec28"
+      }
+    },
+    {
+      "identity" : "combine-schedulers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/combine-schedulers.git",
+      "state" : {
+        "revision" : "0ba3a562716efabb585ccb169450c5389107286b",
+        "version" : "0.6.0"
+      }
+    },
+    {
+      "identity" : "microya",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flinesoft/Microya.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "341f12a8e8e4ddb6cfc90bb6f62436f393a8378f"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "f821dcbac7cb6913f8e0d1a80496d0ba0199fa81",
+        "version" : "0.3.0"
+      }
+    }
+  ],
+  "version" : 2
+}

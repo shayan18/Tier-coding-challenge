@@ -16,6 +16,10 @@
 		E43A147A286F5D2600769369 /* MobilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1479286F5D2600769369 /* MobilityTests.swift */; };
 		E43A1484286F5D2600769369 /* MobilityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1483286F5D2600769369 /* MobilityUITests.swift */; };
 		E43A1486286F5D2600769369 /* MobilityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1485286F5D2600769369 /* MobilityUITestsLaunchTests.swift */; };
+		E43A1493286F63BC00769369 /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1492286F63BC00769369 /* VehicleService.swift */; };
+		E43A1496286F64A400769369 /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = E43A1495286F64A400769369 /* ApiClient */; };
+		E43A1498286F689500769369 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1497286F689500769369 /* MapViewModel.swift */; };
+		E4BBB1D328706904007FE8C1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1D228706904007FE8C1 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		E43A147F286F5D2600769369 /* MobilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1483286F5D2600769369 /* MobilityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilityUITests.swift; sourceTree = "<group>"; };
 		E43A1485286F5D2600769369 /* MobilityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilityUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E43A1492286F63BC00769369 /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
+		E43A1497286F689500769369 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		E4BBB1D228706904007FE8C1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E43A1496286F64A400769369 /* ApiClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,9 @@
 				E43A1462286F5D2500769369 /* AppDelegate.swift */,
 				E43A1464286F5D2500769369 /* SceneDelegate.swift */,
 				E43A1466286F5D2500769369 /* MapViewController.swift */,
+				E4BBB1D228706904007FE8C1 /* LocationManager.swift */,
+				E43A1492286F63BC00769369 /* VehicleService.swift */,
+				E43A1497286F689500769369 /* MapViewModel.swift */,
 				E43A1468286F5D2500769369 /* Main.storyboard */,
 				E43A146B286F5D2600769369 /* Assets.xcassets */,
 				E43A146D286F5D2600769369 /* LaunchScreen.storyboard */,
@@ -143,6 +154,9 @@
 			dependencies = (
 			);
 			name = Mobility;
+			packageProductDependencies = (
+				E43A1495286F64A400769369 /* ApiClient */,
+			);
 			productName = Mobility;
 			productReference = E43A145F286F5D2500769369 /* Mobility.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = E43A1456286F5D2500769369;
+			packageReferences = (
+				E43A1494286F64A300769369 /* XCRemoteSwiftPackageReference "ApiClient-iOS" */,
+			);
 			productRefGroup = E43A1460286F5D2500769369 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E43A1493286F63BC00769369 /* VehicleService.swift in Sources */,
+				E43A1498286F689500769369 /* MapViewModel.swift in Sources */,
+				E4BBB1D328706904007FE8C1 /* LocationManager.swift in Sources */,
 				E43A1467286F5D2500769369 /* MapViewController.swift in Sources */,
 				E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */,
 				E43A1465286F5D2500769369 /* SceneDelegate.swift in Sources */,
@@ -366,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -602,6 +622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E43A1494286F64A300769369 /* XCRemoteSwiftPackageReference "ApiClient-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shayan18/ApiClient-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E43A1495286F64A400769369 /* ApiClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E43A1494286F64A300769369 /* XCRemoteSwiftPackageReference "ApiClient-iOS" */;
+			productName = ApiClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E43A1457286F5D2500769369 /* Project object */;
 }

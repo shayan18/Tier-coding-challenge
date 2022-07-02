@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-vV-Syv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LZ4-37-aLi">
                                 <rect key="frame" x="103.5" y="811" width="207" height="32"/>
                                 <segments>
@@ -30,6 +27,13 @@
                                     <action selector="changeMapType:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lx8-Jo-1RM"/>
                                 </connections>
                             </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-vV-Syv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-5Q-HWM">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemIndigoColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -38,12 +42,15 @@
                             <constraint firstItem="lFs-vV-Syv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fiV-mW-usQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFs-vV-Syv" secondAttribute="trailing" id="kDU-hF-JKl"/>
                             <constraint firstItem="LZ4-37-aLi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kFO-gT-Sb6"/>
+                            <constraint firstItem="Bhh-5Q-HWM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lGV-6L-XIg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LZ4-37-aLi" secondAttribute="bottom" constant="20" id="m1j-uH-Dh1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lFs-vV-Syv" secondAttribute="bottom" id="xir-n8-kSg"/>
                             <constraint firstItem="lFs-vV-Syv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yPZ-IH-iuK"/>
+                            <constraint firstItem="Bhh-5Q-HWM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zDg-Vc-aaB"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Bhh-5Q-HWM" id="NIr-O0-jEI"/>
                         <outlet property="mapView" destination="lFs-vV-Syv" id="ImV-9f-9K4"/>
                     </connections>
                 </viewController>
@@ -55,6 +62,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
