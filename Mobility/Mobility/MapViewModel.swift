@@ -10,17 +10,15 @@ import CoreLocation
 import ApiClient
 
 protocol MapViewModelProtocol {
-  var places: [String] { get }
-  var locations: [CLLocationCoordinate2D] { get }
   var refreshVehicles: ( () -> Void )? { get set }
 }
 
 class MapViewModel: MapViewModelProtocol {
   var refreshVehicles: (() -> Void)?
-  var places: [String] { vehicles.compactMap{$0.vehicleType.rawValue} }
-
-  var locations: [CLLocationCoordinate2D] { vehicles.compactMap{CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lng)}}
   var vehicles: [Vehicle] = []
+
+  var showMessage: ((_ message: String) -> Void)?
+  var updateState: ((_ status: Bool) -> Void)?
   private let vehicleService: VehicleService
 
   init(service: VehicleService) {
@@ -28,13 +26,16 @@ class MapViewModel: MapViewModelProtocol {
   }
 
   func getVehicles() {
+    updateState?(true)
     Task {
       do {
         vehicles = try await vehicleService.vehicles()
         refreshVehicles?()
-      }
-      catch {
+        updateState?(false)
+      } catch {
         print(error)
+        showMessage?(error.localizedDescription)
+        updateState?(false)
       }
     }
   }
