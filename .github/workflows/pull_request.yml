@@ -61,7 +61,7 @@ jobs:
       - name: Publish to code climate
         uses: paambaati/codeclimate-action@v3.0.0
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: ${{ secrets.IOS_CODE_CLIMATE_REPORT_KEY }}
         with:
           coverageCommand: arch -arm64 xcodebuild test -scheme Mobility -destination "platform=iOS Simulator,name=${{ matrix.device }},OS=latest"  -enableCodeCoverage YES  -disableAutomaticPackageResolution
           coverageLocations: |

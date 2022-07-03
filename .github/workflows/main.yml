@@ -9,11 +9,6 @@ env:
 
 
 jobs:
-  linters:
-    runs-on: [self-hosted, macOS, arm64, MacStadium]
-
-    steps:
-      - uses: actions/checkout@v2
 
   tests:
     runs-on: [self-hosted, macOS, arm64, MacStadium]
@@ -37,7 +32,7 @@ jobs:
 
   code-coverage-report:
     runs-on: [self-hosted, macOS, arm64, MacStadium]
-    needs: [linters, tests]
+    needs: [tests]
 
     strategy:
       matrix:
@@ -45,7 +40,7 @@ jobs:
           - iPhone 13
 
     steps:
-      - uses: actions/checkout@
+      - uses: actions/checkout@v1
 
       - name: Build & Run Tests
         run: arch -arm64 xcodebuild test -project $PROJECT_NAME.xcodeproj -scheme $PROJECT_NAME -configuration Debug -destination 'platform=iOS Simulator,name=${{ matrix.device }},OS=latest' -enableCodeCoverage YES -derivedDataPath DerivedData
@@ -58,104 +53,8 @@ jobs:
       - name: Publish to code climate
         uses: paambaati/codeclimate-action@v3.0.0
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: ${{ secrets.IOS_CODE_CLIMATE_REPORT_KEY }}
         with:
           coverageCommand: arch -arm64 xcodebuild test -scheme Mobility -destination "platform=iOS Simulator,name=${{ matrix.device }},OS=latest"  -enableCodeCoverage YES  -disableAutomaticPackageResolution
           coverageLocations: |
             coverage/lcov.info:lcov
-
-  # notify-slack-success:
-  #   runs-on: ubuntu-latest
-  #   needs: [linters, tests]
-  #   if: success()
-  #
-  #   steps:
-  #     - name: Report Success to Slack
-  #       uses: voxmedia/github-action-slack-notify-build@v1
-  #       with:
-  #         channel: ci-ios
-  #         status: 'SUCCESS (build ${{ github.run_number }})'
-  #         color: good
-  #       env:
-  #         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-  #
-  # notify-slack-fail-early:
-  #   runs-on: ubuntu-latest
-  #   needs: [linters]
-  #   if: failure()
-  #
-  #   steps:
-  #     - name: Report Failure to Slack
-  #       uses: voxmedia/github-action-slack-notify-build@v1
-  #       with:
-  #         channel: ci-ios
-  #         status: 'FAILURE (build ${{ github.run_number }})'
-  #         color: danger
-  #       env:
-  #         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-  #
-  #     - name: Report Failure to Team-iOS channel on Slack
-  #       uses: voxmedia/github-action-slack-notify-build@v1
-  #       with:
-  #         channel: team-ios
-  #         status: 'FAILURE (build ${{ github.run_number }})'
-  #         color: danger
-  #       env:
-  #         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-  #
-  #     - name: Cancel current workflow
-  #       uses: andymckay/cancel-action@0.2
-  #
-  # notify-slack-failure:
-  #   runs-on: ubuntu-latest
-  #   needs: [linters, tests]
-  #   if: failure()
-  #
-  #   steps:
-  #     - name: Report Failure to Slack
-  #       uses: voxmedia/github-action-slack-notify-build@v1
-  #       with:
-  #         channel: ci-ios
-  #         status: 'FAILURE (build ${{ github.run_number }})'
-  #         color: danger
-  #       env:
-  #         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-  #
-  #     - name: Report Failure to Team-iOS channel on Slack
-  #       uses: voxmedia/github-action-slack-notify-build@v1
-  #       with:
-  #         channel: team-ios
-  #         status: 'FAILURE (build ${{ github.run_number }})'
-  #         color: danger
-  #       env:
-  #         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-  #
-  #     - name: Cancel current workflow
-  #       uses: andymckay/cancel-action@0.2
-  #
-  # testflight-deploy:
-  #   runs-on: [self-hosted, macOS, arm64, MacStadium]
-  #   needs: [linters]
-  #
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #
-  #     - name: Clean Xcode build cache
-  #       run: rm -rf ~/Library/Developer/Xcode/DerivedData
-  #
-  #     - name: Set build number
-  #       run: agvtool new-version -all ${{ github.run_number }}
-  #
-  #     - name: Run Fastlane action
-  #       timeout-minutes: 30
-  #       uses: maierj/fastlane-action@v2.0.1
-  #       with:
-  #         lane: beta
-  #       env:
-  #         FASTLANE_PASSWORD: ${{ secrets.APP_STORE_CONNECT_PASSWORD }}
-  #         KEYCHAIN_PASSWORD: ${{ secrets.MATCH_KEYCHAIN_PASSWORD }}
-  #         MATCH_PASSWORD: ${{ secrets.MATCH_KEYCHAIN_PASSWORD }}
-  #         APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
-  #         APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
-  #         LC_ALL: en_US.UTF-8
-  #         LANG: en_US.UTF-8
