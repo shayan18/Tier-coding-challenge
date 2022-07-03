@@ -40,7 +40,6 @@ class MapViewModel: MapViewModelProtocol {
         refreshVehicles?()
         updateState?(false)
       } catch {
-        print(error)
         showMessage?(error.localizedDescription)
         updateState?(false)
       }

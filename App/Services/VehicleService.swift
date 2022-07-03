@@ -14,12 +14,10 @@ protocol VehicleProvidable {
 }
 
 struct VehicleService: VehicleProvidable {
-  func vehicles() async throws -> [Vehicle] {
-    let apiProvider: ApiProvider<VehicleEndpoint> = .init(
-      baseUrl: URL(string: "https://api.jsonstorage.net/v1")!
-    )
+  let provider: ApiProvider<VehicleEndpoint>
 
-    let result = await apiProvider.response(on: .vehicle(apiKey: "9ef7d5b3-21c7-4a78-a92b-91efef42cabb"), decodeBodyTo: ApiCollectionResponse<Vehicle>.self)
+  func vehicles() async throws -> [Vehicle] {
+    let result = await provider.response(on: .vehicle(apiKey: AppConstants.apiKey), decodeBodyTo: ApiCollectionResponse<Vehicle>.self)
 
       switch result {
       case let .success(response):

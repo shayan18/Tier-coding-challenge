@@ -2,8 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-vV-Syv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="l3N-ZV-nca"/>
                                 </connections>
@@ -46,21 +46,46 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="location.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="closestVehiclePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Vn-Gq-x5z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJw-FQ-QU3">
+                                <rect key="frame" x="344" y="64" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TlM-dY-r9J"/>
+                                    <constraint firstAttribute="width" constant="50" id="Xo0-bl-eZy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system" title="">
+                                    <color key="baseForegroundColor" name="indigo"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="refreshPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vkl-sx-X0L"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lFs-vV-Syv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="44v-JX-yMN"/>
                             <constraint firstItem="tS8-If-2XU" firstAttribute="centerY" secondItem="LZ4-37-aLi" secondAttribute="centerY" id="ASo-rE-ujs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tS8-If-2XU" secondAttribute="trailing" constant="10" id="BCq-gT-Zq2"/>
                             <constraint firstItem="LZ4-37-aLi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="C4k-nN-LjQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJw-FQ-QU3" secondAttribute="trailing" constant="20" id="LYb-rh-VLI"/>
                             <constraint firstItem="lFs-vV-Syv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fiV-mW-usQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFs-vV-Syv" secondAttribute="trailing" id="kDU-hF-JKl"/>
                             <constraint firstItem="LZ4-37-aLi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kFO-gT-Sb6"/>
                             <constraint firstItem="Bhh-5Q-HWM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lGV-6L-XIg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LZ4-37-aLi" secondAttribute="bottom" constant="20" id="m1j-uH-Dh1"/>
+                            <constraint firstItem="NJw-FQ-QU3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tmT-ZF-Uxr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lFs-vV-Syv" secondAttribute="bottom" id="xir-n8-kSg"/>
-                            <constraint firstItem="lFs-vV-Syv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yPZ-IH-iuK"/>
                             <constraint firstItem="Bhh-5Q-HWM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zDg-Vc-aaB"/>
                         </constraints>
                     </view>
@@ -148,7 +173,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="indigo">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

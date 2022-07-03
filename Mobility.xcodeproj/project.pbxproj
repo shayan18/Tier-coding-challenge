@@ -11,13 +11,23 @@
 		E4016EB02871B61A00F1E9D1 /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EAF2871B61900F1E9D1 /* BartyCrouch.swift */; };
 		E4016EB32871B6A600F1E9D1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EB22871B6A600F1E9D1 /* Assets.swift */; };
 		E4016EB52871B6C500F1E9D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EB42871B6C500F1E9D1 /* Strings.swift */; };
+		E4016EBE2871C0BB00F1E9D1 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = E4016EBD2871C0BB00F1E9D1 /* Toast */; };
+		E4016EC02871C1EC00F1E9D1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EBF2871C1EC00F1E9D1 /* AppConstants.swift */; };
+		E4016EC22871C4D300F1E9D1 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EC12871C4D300F1E9D1 /* StringExt.swift */; };
+		E4016EC42871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EC32871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift */; };
+		E4016EC62871CEFC00F1E9D1 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EC52871CEFC00F1E9D1 /* MapViewModelTests.swift */; };
+		E4016ECB2871CFD900F1E9D1 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016ECA2871CFD900F1E9D1 /* TestConstants.swift */; };
+		E4016ECD2871D13B00F1E9D1 /* VehicleEndPointExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016ECC2871D13B00F1E9D1 /* VehicleEndPointExt.swift */; };
+		E4016ECF2871D16D00F1E9D1 /* MockedJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016ECE2871D16D00F1E9D1 /* MockedJson.swift */; };
+		E4016ED12871D18F00F1E9D1 /* DataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016ED02871D18F00F1E9D1 /* DataExt.swift */; };
+		E4016ED32871D24900F1E9D1 /* Vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = E4016ED22871D24900F1E9D1 /* Vehicles.json */; };
+		E4016ED62871D44000F1E9D1 /* AppEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016ED42871D42B00F1E9D1 /* AppEnv.swift */; };
 		E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1462286F5D2500769369 /* AppDelegate.swift */; };
 		E43A1465286F5D2500769369 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1464286F5D2500769369 /* SceneDelegate.swift */; };
 		E43A1467286F5D2500769369 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1466286F5D2500769369 /* MapViewController.swift */; };
 		E43A146A286F5D2500769369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43A1468286F5D2500769369 /* Main.storyboard */; };
 		E43A146C286F5D2600769369 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43A146B286F5D2600769369 /* Images.xcassets */; };
 		E43A146F286F5D2600769369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43A146D286F5D2600769369 /* LaunchScreen.storyboard */; };
-		E43A147A286F5D2600769369 /* MobilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1479286F5D2600769369 /* MobilityTests.swift */; };
 		E43A1493286F63BC00769369 /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1492286F63BC00769369 /* VehicleService.swift */; };
 		E43A1496286F64A400769369 /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = E43A1495286F64A400769369 /* ApiClient */; };
 		E43A1498286F689500769369 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1497286F689500769369 /* MapViewModel.swift */; };
@@ -25,11 +35,10 @@
 		E4F17F472870A09100B863C7 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */; };
 		E4F17F4D2870A0FF00B863C7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */; };
 		E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */; };
-		E4F17F512870A4F300B863C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F502870A4F300B863C7 /* Extensions.swift */; };
+		E4F17F512870A4F300B863C7 /* UIStoryboardExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F502870A4F300B863C7 /* UIStoryboardExt.swift */; };
 		E4F17F532870BA4900B863C7 /* MapItemAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F522870BA4900B863C7 /* MapItemAnnotationView.swift */; };
 		E4F17F552870BAC900B863C7 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F542870BAC900B863C7 /* ClusterAnnotationView.swift */; };
 		E4F17F572870BE0D00B863C7 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F562870BE0D00B863C7 /* MapItem.swift */; };
-		E4F17F592870E57300B863C7 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F582870E57300B863C7 /* ColorExt.swift */; };
 		E4F17F5E2871AAFF00B863C7 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E4F17F5C2871AAFF00B863C7 /* en.lproj */; };
 		E4F17F5F2871AAFF00B863C7 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E4F17F5D2871AAFF00B863C7 /* de.lproj */; };
 /* End PBXBuildFile section */
@@ -56,6 +65,16 @@
 		E4016EAF2871B61900F1E9D1 /* BartyCrouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
 		E4016EB22871B6A600F1E9D1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		E4016EB42871B6C500F1E9D1 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E4016EBF2871C1EC00F1E9D1 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E4016EC12871C4D300F1E9D1 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		E4016EC32871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGraphicsImageRendererExt.swift; sourceTree = "<group>"; };
+		E4016EC52871CEFC00F1E9D1 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		E4016ECA2871CFD900F1E9D1 /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		E4016ECC2871D13B00F1E9D1 /* VehicleEndPointExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleEndPointExt.swift; sourceTree = "<group>"; };
+		E4016ECE2871D16D00F1E9D1 /* MockedJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedJson.swift; sourceTree = "<group>"; };
+		E4016ED02871D18F00F1E9D1 /* DataExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExt.swift; sourceTree = "<group>"; };
+		E4016ED22871D24900F1E9D1 /* Vehicles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Vehicles.json; sourceTree = "<group>"; };
+		E4016ED42871D42B00F1E9D1 /* AppEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnv.swift; sourceTree = "<group>"; };
 		E43A145F286F5D2500769369 /* Mobility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1462286F5D2500769369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E43A1464286F5D2500769369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +84,6 @@
 		E43A146E286F5D2600769369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E43A1470286F5D2600769369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E43A1475286F5D2600769369 /* MobilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E43A1479286F5D2600769369 /* MobilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilityTests.swift; sourceTree = "<group>"; };
 		E43A147F286F5D2600769369 /* MobilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1492286F63BC00769369 /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
 		E43A1497286F689500769369 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -73,11 +91,10 @@
 		E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
-		E4F17F502870A4F300B863C7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E4F17F502870A4F300B863C7 /* UIStoryboardExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExt.swift; sourceTree = "<group>"; };
 		E4F17F522870BA4900B863C7 /* MapItemAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemAnnotationView.swift; sourceTree = "<group>"; };
 		E4F17F542870BAC900B863C7 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		E4F17F562870BE0D00B863C7 /* MapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItem.swift; sourceTree = "<group>"; };
-		E4F17F582870E57300B863C7 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		E4F17F5C2871AAFF00B863C7 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		E4F17F5D2871AAFF00B863C7 /* de.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4016EBE2871C0BB00F1E9D1 /* Toast in Frameworks */,
 				E43A1496286F64A400769369 /* ApiClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +187,17 @@
 			path = AppDelegates;
 			sourceTree = "<group>";
 		};
+		E4016ED72871DEAE00F1E9D1 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				E4016ECA2871CFD900F1E9D1 /* TestConstants.swift */,
+				E4016ED02871D18F00F1E9D1 /* DataExt.swift */,
+				E4016ECE2871D16D00F1E9D1 /* MockedJson.swift */,
+				E4016ECC2871D13B00F1E9D1 /* VehicleEndPointExt.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		E43A1456286F5D2500769369 = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +236,9 @@
 		E43A1478286F5D2600769369 /* MobilityTests */ = {
 			isa = PBXGroup;
 			children = (
-				E43A1479286F5D2600769369 /* MobilityTests.swift */,
+				E4016ED22871D24900F1E9D1 /* Vehicles.json */,
+				E4016ED72871DEAE00F1E9D1 /* Global */,
+				E4016EC52871CEFC00F1E9D1 /* MapViewModelTests.swift */,
 			);
 			path = MobilityTests;
 			sourceTree = "<group>";
@@ -215,9 +246,9 @@
 		E4F17F482870A09E00B863C7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E4016EBF2871C1EC00F1E9D1 /* AppConstants.swift */,
 				E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */,
 				E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */,
-				E4F17F502870A4F300B863C7 /* Extensions.swift */,
 				E4016EB82871BD2D00F1E9D1 /* Views */,
 				E4F17F5A2870E57600B863C7 /* Extensions */,
 			);
@@ -227,6 +258,7 @@
 		E4F17F492870A0A700B863C7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E4016ED42871D42B00F1E9D1 /* AppEnv.swift */,
 				E43A1466286F5D2500769369 /* MapViewController.swift */,
 				E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */,
 			);
@@ -236,7 +268,9 @@
 		E4F17F5A2870E57600B863C7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E4F17F582870E57300B863C7 /* ColorExt.swift */,
+				E4F17F502870A4F300B863C7 /* UIStoryboardExt.swift */,
+				E4016EC12871C4D300F1E9D1 /* StringExt.swift */,
+				E4016EC32871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +306,7 @@
 			name = Mobility;
 			packageProductDependencies = (
 				E43A1495286F64A400769369 /* ApiClient */,
+				E4016EBD2871C0BB00F1E9D1 /* Toast */,
 			);
 			productName = Mobility;
 			productReference = E43A145F286F5D2500769369 /* Mobility.app */;
@@ -347,6 +382,7 @@
 			mainGroup = E43A1456286F5D2500769369;
 			packageReferences = (
 				E43A1494286F64A300769369 /* XCRemoteSwiftPackageReference "ApiClient-iOS" */,
+				E4016EBC2871C0BB00F1E9D1 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = E43A1460286F5D2500769369 /* Products */;
 			projectDirPath = "";
@@ -377,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4016ED32871D24900F1E9D1 /* Vehicles.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +432,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */,
-				E4F17F592870E57300B863C7 /* ColorExt.swift in Sources */,
+				E4016EC22871C4D300F1E9D1 /* StringExt.swift in Sources */,
+				E4016EC02871C1EC00F1E9D1 /* AppConstants.swift in Sources */,
 				E4016EB02871B61A00F1E9D1 /* BartyCrouch.swift in Sources */,
+				E4016EC42871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift in Sources */,
 				E4F17F552870BAC900B863C7 /* ClusterAnnotationView.swift in Sources */,
 				E4F17F4D2870A0FF00B863C7 /* Coordinator.swift in Sources */,
 				E43A1493286F63BC00769369 /* VehicleService.swift in Sources */,
@@ -405,8 +444,9 @@
 				E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */,
 				E4F17F532870BA4900B863C7 /* MapItemAnnotationView.swift in Sources */,
 				E4016EB52871B6C500F1E9D1 /* Strings.swift in Sources */,
+				E4016ED62871D44000F1E9D1 /* AppEnv.swift in Sources */,
 				E43A1498286F689500769369 /* MapViewModel.swift in Sources */,
-				E4F17F512870A4F300B863C7 /* Extensions.swift in Sources */,
+				E4F17F512870A4F300B863C7 /* UIStoryboardExt.swift in Sources */,
 				E43A1467286F5D2500769369 /* MapViewController.swift in Sources */,
 				E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */,
 				E43A1465286F5D2500769369 /* SceneDelegate.swift in Sources */,
@@ -418,7 +458,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43A147A286F5D2600769369 /* MobilityTests.swift in Sources */,
+				E4016ED12871D18F00F1E9D1 /* DataExt.swift in Sources */,
+				E4016ECF2871D16D00F1E9D1 /* MockedJson.swift in Sources */,
+				E4016ECD2871D13B00F1E9D1 /* VehicleEndPointExt.swift in Sources */,
+				E4016ECB2871CFD900F1E9D1 /* TestConstants.swift in Sources */,
+				E4016EC62871CEFC00F1E9D1 /* MapViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +796,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E4016EBC2871C0BB00F1E9D1 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		E43A1494286F64A300769369 /* XCRemoteSwiftPackageReference "ApiClient-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/shayan18/ApiClient-iOS";
@@ -763,6 +815,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E4016EBD2871C0BB00F1E9D1 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4016EBC2871C0BB00F1E9D1 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		E43A1495286F64A400769369 /* ApiClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E43A1494286F64A300769369 /* XCRemoteSwiftPackageReference "ApiClient-iOS" */;

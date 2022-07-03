@@ -9,7 +9,6 @@ import MapKit
 import ApiClient
 
 final class MapItem: NSObject, MKAnnotation {
-
     let coordinate: CLLocationCoordinate2D
     let vehicleType: VehicleType
     var image: UIImage { return vehicleType.image }

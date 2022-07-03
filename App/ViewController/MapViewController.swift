@@ -9,14 +9,15 @@ import UIKit
 import MapKit
 import CoreLocation
 import ApiClient
+import Toast
 
 final class MapViewController: UIViewController {
   // MARK: Outlets
-  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet private weak var mapView: MKMapView!
 
   private let locationManager = CLLocationManager()
-  private let viewModel = MapViewModel(service: .init())
+  private let viewModel = MapViewModel(service: .init(provider: AppEnv.apiProvider))
   override func viewDidLoad() {
     super.viewDidLoad()
     configureUserLocation()
@@ -24,15 +25,14 @@ final class MapViewController: UIViewController {
     setupViewModelCallbacks()
     viewModel.getVehicles()
   }
+  @IBAction func refreshPressed(_ sender: UIButton) {
+    viewModel.getVehicles()
 
-  func ShowNearestVehicle(location: CLLocation?) {
-    guard let closestVehicle = location else { return }
-    mapView.setCenter(closestVehicle.coordinate, animated: true)
-    let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-    let region = MKCoordinateRegion(center: closestVehicle.coordinate, span: span)
-    self.mapView.setRegion(region, animated: true)
   }
+}
 
+// MARK: View Configurations
+private extension MapViewController {
   func configureMapView() {
     mapView.showsUserLocation = true
     mapView.register(
@@ -51,7 +51,20 @@ final class MapViewController: UIViewController {
     }
   }
 
-  @IBAction private func changeMapType(_ sender: UISegmentedControl) {
+  func SetupMapLocation(location: CLLocation?) {
+    guard let closestVehicle = location else { return }
+    mapView.setCenter(closestVehicle.coordinate, animated: true)
+    let region = MKCoordinateRegion(center: closestVehicle.coordinate, span: AppConstants.defaultMapSpan)
+    self.mapView.setRegion(region, animated: true)
+  }
+}
+
+// MARK: Actions
+private extension MapViewController {
+  @IBAction func closestVehiclePressed(_ sender: UIButton) {
+    SetupMapLocation(location: viewModel.closestVehicle(location: mapView.userLocation.location))
+  }
+  @IBAction func changeMapType(_ sender: UISegmentedControl) {
     if sender.selectedSegmentIndex == 0 {
       mapView.mapType = .standard
     } else {
@@ -60,6 +73,7 @@ final class MapViewController: UIViewController {
   }
 }
 
+// MARK: ViewModel Outputs
 private extension MapViewController {
   func setupViewModelCallbacks() {
     viewModel.updateState = { [weak self] status in
@@ -73,7 +87,9 @@ private extension MapViewController {
     }
 
     viewModel.showMessage = { [weak self] message in
-      print(message)
+      DispatchQueue.main.async {
+        self?.view.makeToast(message, duration: AppConstants.defaultToastDuration, position: .bottom)
+      }
     }
 
     viewModel.refreshVehicles = { [weak self] in
@@ -83,12 +99,13 @@ private extension MapViewController {
       }
 
       DispatchQueue.main.async {
-        self.ShowNearestVehicle(location: self.viewModel.closestVehicle(location: self.mapView.userLocation.location))
+        self.SetupMapLocation(location: self.viewModel.closestVehicle(location: self.mapView.userLocation.location))
       }
     }
   }
 }
 
+// MARK: MKMapView Delegates
 extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
     let vc = self.storyboard?.instantiateViewController(withIdentifier: "vehicleDetail") as! VehicleDetailViewController

@@ -20,3 +20,18 @@ protocol StoryboardInitializable {
     static var storyboardName: UIStoryboard.Storyboard { get }
     static func instantiateViewController() -> UIViewController
 }
+
+extension StoryboardInitializable where Self: Coordinator {
+  static var storyboardIdentifier: String {
+    return String(describing: self)
+  }
+
+  static var storyboardName: UIStoryboard.Storyboard {
+    return UIStoryboard.Storyboard.main
+  }
+  static func instantiateViewController() -> UIViewController {
+    let storyboard = UIStoryboard.storyboard(storyboard: storyboardName)
+    return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier)
+
+  }
+}
