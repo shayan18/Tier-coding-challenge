@@ -1,0 +1,28 @@
+name: Production
+
+on:
+  push:
+    branches: [production]
+
+env:
+  PROJECT_NAME: Mobility
+
+
+jobs:
+  changelog_to_slack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Post latest changelog section to Slack
+        run: |
+          changelog=$(
+            sed '/^## \[[0-9][0-9.]*[0-9]\].*$/,/^\s*$/!d;/^\s*$/q' CHANGELOG.md |  # find latest section
+            sed -E 's/\[([^]]*)\]\(([^)]*)\)/<\2|\1>/g' |  # convert Markdown named links to Slack named links
+            sed -E 's/^([^#])/> \1/g' |  # turn all non-header lines to quoted lines
+            sed -E 's/### (.*)/_\1_/g' |  # make each sub-section header italic
+            sed -E 's/## (.*)/*\1*/g' |  # make version header bold
+            sed '$d' | sed "s/\"/'/g"  # prepare formatting for Slack API
+          )
+          curl -X POST --data-urlencode "payload={\"username\": \"[${{ env.PROJECT_NAME }}-iOS] Release-Bot\", \"text\": \"$changelog\", \"icon_emoji\": \":iphone:\"}" https://hooks.slack.com/services/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

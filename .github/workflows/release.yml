@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - release/*
+      - hotfix/*
+
+env:
+  PROJECT_NAME: Terminal
+
+jobs:
+  cancel-previous-runs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel previous runs of this workflow on same branch
+        uses: rokroskar/workflow-run-cleanup-action@v0.2.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  tests:
+    runs-on: [self-hosted, macOS, arm64, MacStadium]
+
+    strategy:
+      matrix:
+        device:
+          - iPhone 13
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Clean Xcode build cache
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData
+
+      - name: Resolve Package Dependencies
+        run: arch -arm64 xcodebuild -resolvePackageDependencies
+
+      - name: Build & Run Tests
+        run: arch -arm64 xcodebuild test -scheme $PROJECT_NAME -destination 'platform=iOS Simulator,name=${{ matrix.device }},OS=latest' -disableAutomaticPackageResolution
+
+  app-store-deploy:
+    runs-on: [self-hosted, macOS, arm64, MacStadium]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Clean Xcode build cache
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData
+
+      - name: Set build number
+        run: agvtool new-version -all ${{ github.run_number }}
+
+      - name: Run Fastlane action
+        timeout-minutes: 30
+        uses: maierj/fastlane-action@v2.0.1
+        with:
+          lane: release
+        env:
+          FASTLANE_PASSWORD: ${{ secrets.APP_STORE_CONNECT_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.MATCH_KEYCHAIN_PASSWORD }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_KEYCHAIN_PASSWORD }}
+          APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          LC_ALL: en_US.UTF-8
+          LANG: en_US.UTF-8
