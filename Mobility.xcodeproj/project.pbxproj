@@ -616,6 +616,8 @@
 				DEVELOPMENT_TEAM = 4SXK89N4ZG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TIER;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your current location will be displayed on the map and used to find nearby scooters";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -626,7 +628,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tiermobility.app.Mobility;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tiermobility.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -644,6 +646,8 @@
 				DEVELOPMENT_TEAM = 4SXK89N4ZG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TIER;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your current location will be displayed on the map and used to find nearby scooters";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -654,7 +658,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tiermobility.app.Mobility;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tiermobility.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
