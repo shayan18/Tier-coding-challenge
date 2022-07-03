@@ -1,3 +1,3 @@
 phrase pull
 bartycrouch update
-ruby -pi -e "gsub(/\/\*[^\n]+\n/, '')" Mobility/Resources/*.lproj/Localizable.strings
+ruby -pi -e "gsub(/\/\*[^\n]+\n/, '')" App/Resources/*.lproj/Localizable.strings
