@@ -22,6 +22,8 @@
 		E4016ED12871D18F00F1E9D1 /* DataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016ED02871D18F00F1E9D1 /* DataExt.swift */; };
 		E4016ED32871D24900F1E9D1 /* Vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = E4016ED22871D24900F1E9D1 /* Vehicles.json */; };
 		E4016ED62871D44000F1E9D1 /* AppEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016ED42871D42B00F1E9D1 /* AppEnv.swift */; };
+		E4016EDE28720F2C00F1E9D1 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EDB28720EC800F1E9D1 /* Storyboarded.swift */; };
+		E4016EE128721E2E00F1E9D1 /* NSObjectExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EE028721E2E00F1E9D1 /* NSObjectExt.swift */; };
 		E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1462286F5D2500769369 /* AppDelegate.swift */; };
 		E43A1465286F5D2500769369 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1464286F5D2500769369 /* SceneDelegate.swift */; };
 		E43A1467286F5D2500769369 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1466286F5D2500769369 /* MapViewController.swift */; };
@@ -32,11 +34,8 @@
 		E43A1496286F64A400769369 /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = E43A1495286F64A400769369 /* ApiClient */; };
 		E43A1498286F689500769369 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1497286F689500769369 /* MapViewModel.swift */; };
 		E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */; };
-		E4F17F472870A09100B863C7 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */; };
-		E4F17F4D2870A0FF00B863C7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */; };
 		E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */; };
-		E4F17F512870A4F300B863C7 /* UIStoryboardExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F502870A4F300B863C7 /* UIStoryboardExt.swift */; };
-		E4F17F532870BA4900B863C7 /* MapItemAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F522870BA4900B863C7 /* MapItemAnnotationView.swift */; };
+		E4F17F532870BA4900B863C7 /* VehicleAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */; };
 		E4F17F552870BAC900B863C7 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F542870BAC900B863C7 /* ClusterAnnotationView.swift */; };
 		E4F17F5E2871AAFF00B863C7 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E4F17F5C2871AAFF00B863C7 /* en.lproj */; };
 		E4F17F5F2871AAFF00B863C7 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E4F17F5D2871AAFF00B863C7 /* de.lproj */; };
@@ -74,6 +73,8 @@
 		E4016ED02871D18F00F1E9D1 /* DataExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExt.swift; sourceTree = "<group>"; };
 		E4016ED22871D24900F1E9D1 /* Vehicles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Vehicles.json; sourceTree = "<group>"; };
 		E4016ED42871D42B00F1E9D1 /* AppEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnv.swift; sourceTree = "<group>"; };
+		E4016EDB28720EC800F1E9D1 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		E4016EE028721E2E00F1E9D1 /* NSObjectExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExt.swift; sourceTree = "<group>"; };
 		E43A145F286F5D2500769369 /* Mobility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1462286F5D2500769369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E43A1464286F5D2500769369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,11 +88,8 @@
 		E43A1492286F63BC00769369 /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
 		E43A1497286F689500769369 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
-		E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
-		E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
-		E4F17F502870A4F300B863C7 /* UIStoryboardExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExt.swift; sourceTree = "<group>"; };
-		E4F17F522870BA4900B863C7 /* MapItemAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemAnnotationView.swift; sourceTree = "<group>"; };
+		E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotationView.swift; sourceTree = "<group>"; };
 		E4F17F542870BAC900B863C7 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		E4F17F5C2871AAFF00B863C7 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		E4F17F5D2871AAFF00B863C7 /* de.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
@@ -145,7 +143,7 @@
 		E4016EB82871BD2D00F1E9D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E4F17F522870BA4900B863C7 /* MapItemAnnotationView.swift */,
+				E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */,
 				E4F17F542870BAC900B863C7 /* ClusterAnnotationView.swift */,
 			);
 			path = Views;
@@ -211,10 +209,11 @@
 			isa = PBXGroup;
 			children = (
 				E4016EBB2871BD7000F1E9D1 /* AppDelegates */,
-				E4016EB62871BD0C00F1E9D1 /* ViewModels */,
 				E4F17F492870A0A700B863C7 /* ViewController */,
 				E4016EB92871BD5400F1E9D1 /* Storyboards */,
-				E4F17F482870A09E00B863C7 /* Helper */,
+				E4016EB62871BD0C00F1E9D1 /* ViewModels */,
+				E4016EB82871BD2D00F1E9D1 /* Views */,
+				E4F17F482870A09E00B863C7 /* Global */,
 				E4F17F5B2871AAE900B863C7 /* Resources */,
 				E4016EBA2871BD6300F1E9D1 /* Services */,
 				E43A1470286F5D2600769369 /* Info.plist */,
@@ -232,17 +231,14 @@
 			path = MobilityTests;
 			sourceTree = "<group>";
 		};
-		E4F17F482870A09E00B863C7 /* Helper */ = {
+		E4F17F482870A09E00B863C7 /* Global */ = {
 			isa = PBXGroup;
 			children = (
 				E4016ED42871D42B00F1E9D1 /* AppEnv.swift */,
 				E4016EBF2871C1EC00F1E9D1 /* AppConstants.swift */,
-				E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */,
-				E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */,
-				E4016EB82871BD2D00F1E9D1 /* Views */,
 				E4F17F5A2870E57600B863C7 /* Extensions */,
 			);
-			path = Helper;
+			path = Global;
 			sourceTree = "<group>";
 		};
 		E4F17F492870A0A700B863C7 /* ViewController */ = {
@@ -257,7 +253,8 @@
 		E4F17F5A2870E57600B863C7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E4F17F502870A4F300B863C7 /* UIStoryboardExt.swift */,
+				E4016EE028721E2E00F1E9D1 /* NSObjectExt.swift */,
+				E4016EDB28720EC800F1E9D1 /* Storyboarded.swift */,
 				E4016EC12871C4D300F1E9D1 /* StringExt.swift */,
 				E4016EC32871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift */,
 			);
@@ -426,16 +423,14 @@
 				E4016EB02871B61A00F1E9D1 /* BartyCrouch.swift in Sources */,
 				E4016EC42871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift in Sources */,
 				E4F17F552870BAC900B863C7 /* ClusterAnnotationView.swift in Sources */,
-				E4F17F4D2870A0FF00B863C7 /* Coordinator.swift in Sources */,
 				E43A1493286F63BC00769369 /* VehicleService.swift in Sources */,
 				E4016EB32871B6A600F1E9D1 /* Assets.swift in Sources */,
-				E4F17F472870A09100B863C7 /* StoryboardInitializable.swift in Sources */,
+				E4016EDE28720F2C00F1E9D1 /* Storyboarded.swift in Sources */,
 				E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */,
-				E4F17F532870BA4900B863C7 /* MapItemAnnotationView.swift in Sources */,
+				E4F17F532870BA4900B863C7 /* VehicleAnnotationView.swift in Sources */,
 				E4016EB52871B6C500F1E9D1 /* Strings.swift in Sources */,
 				E4016ED62871D44000F1E9D1 /* AppEnv.swift in Sources */,
 				E43A1498286F689500769369 /* MapViewModel.swift in Sources */,
-				E4F17F512870A4F300B863C7 /* UIStoryboardExt.swift in Sources */,
 				E43A1467286F5D2500769369 /* MapViewController.swift in Sources */,
 				E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */,
 				E43A1465286F5D2500769369 /* SceneDelegate.swift in Sources */,
@@ -449,6 +444,7 @@
 				E4016ED12871D18F00F1E9D1 /* DataExt.swift in Sources */,
 				E4016ECF2871D16D00F1E9D1 /* MockedJson.swift in Sources */,
 				E4016ECD2871D13B00F1E9D1 /* VehicleEndPointExt.swift in Sources */,
+				E4016EE128721E2E00F1E9D1 /* NSObjectExt.swift in Sources */,
 				E4016ECB2871CFD900F1E9D1 /* TestConstants.swift in Sources */,
 				E4016EC62871CEFC00F1E9D1 /* MapViewModelTests.swift in Sources */,
 			);

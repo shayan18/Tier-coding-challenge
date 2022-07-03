@@ -13,8 +13,9 @@ import Toast
 
 final class MapViewController: UIViewController {
   // MARK: Outlets
-  @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet private weak var mapView: MKMapView!
+  @IBOutlet private weak var retryButton: UIButton!
+  @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
 
   private let locationManager = CLLocationManager()
   private let viewModel = MapViewModel(service: .init(provider: AppEnv.apiProvider))
@@ -22,12 +23,8 @@ final class MapViewController: UIViewController {
     super.viewDidLoad()
     configureUserLocation()
     configureMapView()
-    setupViewModelCallbacks()
     viewModel.getVehicles()
-  }
-  @IBAction func refreshPressed(_ sender: UIButton) {
-    viewModel.getVehicles()
-
+    viewModelOutputs()
   }
 }
 
@@ -36,7 +33,7 @@ private extension MapViewController {
   func configureMapView() {
     mapView.showsUserLocation = true
     mapView.register(
-      MapItemAnnotationView.self,
+      VehicleAnnotationView.self,
       forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     mapView.register(
       ClusterAnnotationView.self,
@@ -57,26 +54,34 @@ private extension MapViewController {
     let region = MKCoordinateRegion(center: closestVehicle.coordinate, span: AppConstants.defaultMapSpan)
     self.mapView.setRegion(region, animated: true)
   }
+
+  private func showVehicleDetailView(vehicle: Vehicle) {
+    let vehicleDetailVC = VehicleDetailViewController.instantiate()
+    vehicleDetailVC.viewModel = .init(vehicle: vehicle)
+    vehicleDetailVC.sheetPresentationController?.detents = [.medium()]
+    vehicleDetailVC.sheetPresentationController?.prefersGrabberVisible = true
+    present(vehicleDetailVC, animated: true, completion: nil)
+  }
 }
 
 // MARK: Actions
 private extension MapViewController {
+  @IBAction func refreshPressed(_ sender: UIButton) {
+    viewModel.getVehicles()
+  }
+
   @IBAction func closestVehiclePressed(_ sender: UIButton) {
     SetupMapLocation(location: viewModel.closestVehicle(location: mapView.userLocation.location))
   }
   @IBAction func changeMapType(_ sender: UISegmentedControl) {
-    if sender.selectedSegmentIndex == 0 {
-      mapView.mapType = .standard
-    } else {
-      mapView.mapType = .mutedStandard
-    }
+    mapView.mapType = sender.selectedSegmentIndex == 0 ? .standard : .mutedStandard
   }
 }
 
 // MARK: ViewModel Outputs
 private extension MapViewController {
-  func setupViewModelCallbacks() {
-    viewModel.updateState = { [weak self] status in
+  func viewModelOutputs() {
+    viewModel.ongoingRequest = { [weak self] status in
       if status {
         self?.activityIndicator.startAnimating()
       } else {
@@ -88,7 +93,7 @@ private extension MapViewController {
 
     viewModel.showMessage = { [weak self] message in
       DispatchQueue.main.async {
-        self?.view.makeToast(message, duration: AppConstants.defaultToastDuration, position: .bottom)
+        self?.view.makeToast(message, duration: AppConstants.defaultToastDuration, position: .top)
       }
     }
 
@@ -99,6 +104,7 @@ private extension MapViewController {
       }
 
       DispatchQueue.main.async {
+        self.retryButton.isHidden = true
         self.SetupMapLocation(location: self.viewModel.closestVehicle(location: self.mapView.userLocation.location))
       }
     }
@@ -109,13 +115,7 @@ private extension MapViewController {
 extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
     if let vehicle = view.annotation as? Vehicle {
-
-      let vc = self.storyboard?.instantiateViewController(withIdentifier: "vehicleDetail") as! VehicleDetailViewController
-      vc.sheetPresentationController?.detents = [.medium()]
-      vc.viewModel = .init(data: vehicle)
-      vc.sheetPresentationController?.prefersGrabberVisible = true
-      self.present(vc, animated: true, completion: nil)
+      showVehicleDetailView(vehicle: vehicle)
     }
-
   }
 }

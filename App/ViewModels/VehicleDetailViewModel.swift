@@ -13,16 +13,16 @@ protocol VehicleDetailViewModelProtocol {
   var showData : ((Vehicle) ->())?{ get set }
 }
 
-class VehicleDetailViewModel: VehicleDetailViewModelProtocol {
+final class VehicleDetailViewModel: VehicleDetailViewModelProtocol {
   var vehicle: Vehicle
   var showData: ((Vehicle) -> ())?
   var battery: String { "Battery Level: \(vehicle.batteryLevel)" }
   var maxSpeed: String { "Max Speed: \(vehicle.maxSpeed)" }
   var Location: String  { "Location: \(vehicle.lat) , \(vehicle.lng)" }
-  var isHelmetAvailable: String { "Helmet available: \(vehicle.hasHelmetBox ? "YES"  : "NO")" }
+  var isHelmetAvailable: String { "Helmet available: \(vehicle.hasHelmetBox ? "YES" : "NO")" }
 
-  init(data : Vehicle) {
-    self.vehicle = data
+  init(vehicle : Vehicle) {
+    self.vehicle = vehicle
   }
 
   func viewDidLoad() {

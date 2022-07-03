@@ -25,11 +25,12 @@
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LZ4-37-aLi">
                                 <rect key="frame" x="72.5" y="801" width="248.5" height="32"/>
+                                <color key="backgroundColor" name="indigo"/>
                                 <segments>
                                     <segment title="Standard"/>
                                     <segment title="Muted Standard"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" systemColor="tintColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="changeMapType:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lx8-Jo-1RM"/>
                                 </connections>
@@ -40,7 +41,7 @@
                             </activityIndicatorView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS8-If-2XU">
                                 <rect key="frame" x="349" y="791.5" width="50" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="cje-Rh-dJq"/>
                                     <constraint firstAttribute="height" constant="50" id="znx-79-8ZN"/>
@@ -58,15 +59,13 @@
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJw-FQ-QU3">
                                 <rect key="frame" x="344" y="64" width="50" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TlM-dY-r9J"/>
                                     <constraint firstAttribute="width" constant="50" id="Xo0-bl-eZy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system" title="">
-                                    <color key="baseForegroundColor" name="indigo"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system" title=""/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                         <integer key="value" value="15"/>
@@ -98,6 +97,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Bhh-5Q-HWM" id="NIr-O0-jEI"/>
                         <outlet property="mapView" destination="lFs-vV-Syv" id="ImV-9f-9K4"/>
+                        <outlet property="retryButton" destination="NJw-FQ-QU3" id="tOI-yI-v3q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -107,7 +107,7 @@
         <!--Vehicle Detail View Controller-->
         <scene sceneID="CtY-G4-2yD">
             <objects>
-                <viewController storyboardIdentifier="vehicleDetail" id="sIP-bo-uQq" customClass="VehicleDetailViewController" customModule="Mobility" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VehicleDetailViewController" id="sIP-bo-uQq" customClass="VehicleDetailViewController" customModule="Mobility" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SWM-66-bic">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,12 +168,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zar-ln-d81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953.62318840579712" y="76.339285714285708"/>
+            <point key="canvasLocation" x="996" y="116"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="ButtonColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
         <namedColor name="indigo">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -188,9 +191,6 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

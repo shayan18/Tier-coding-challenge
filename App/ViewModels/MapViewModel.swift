@@ -20,7 +20,7 @@ class MapViewModel: MapViewModelProtocol {
   var vehicles: [Vehicle] = []
 
   var showMessage: ((_ message: String) -> Void)?
-  var updateState: ((_ status: Bool) -> Void)?
+  var ongoingRequest: ((_ status: Bool) -> Void)?
   private let vehicleService: VehicleService
 
   init(service: VehicleService) {
@@ -33,15 +33,16 @@ class MapViewModel: MapViewModelProtocol {
   }
 
   func getVehicles() {
-    updateState?(true)
+    ongoingRequest?(true)
     Task {
       do {
         vehicles = try await vehicleService.vehicles()
         refreshVehicles?()
-        updateState?(false)
+        showMessage?("Vehicles fetched successfully")
+        ongoingRequest?(false)
       } catch {
         showMessage?(error.localizedDescription)
-        updateState?(false)
+        ongoingRequest?(false)
       }
     }
   }

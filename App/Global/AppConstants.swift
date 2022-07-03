@@ -18,5 +18,5 @@ enum AppConstants {
   static let defaultMapSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
 
   /// Default duration for hiding toast messages after being presented.
-  static let defaultToastDuration: Double = 2.0
+  static let defaultToastDuration: Double = 3.0
 }

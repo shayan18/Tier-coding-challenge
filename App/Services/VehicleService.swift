@@ -14,19 +14,22 @@ protocol VehicleProvidable {
 }
 
 struct VehicleService: VehicleProvidable {
-  let provider: ApiProvider<VehicleEndpoint>
+  private let provider: ApiProvider<VehicleEndpoint>
+
+  init(provider: ApiProvider<VehicleEndpoint>) {
+    self.provider = provider
+  }
 
   func vehicles() async throws -> [Vehicle] {
     let result = await provider.response(on: .vehicle(apiKey: AppConstants.apiKey), decodeBodyTo: ApiCollectionResponse<Vehicle>.self)
 
       switch result {
-      case let .success(response):
-        return response.data.compactMap { $0.attributes }
+      case let .success(vehicleResponse):
+        return vehicleResponse.data.compactMap { $0.attributes }
 
       case let .failure(error):
-        print(error)
+        throw error
       }
-    return []
   }
 }
 

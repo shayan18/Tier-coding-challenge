@@ -8,7 +8,7 @@
 import MapKit
 import ApiClient
 
-final class MapItemAnnotationView: MKAnnotationView {
+final class VehicleAnnotationView: MKAnnotationView {
   override var annotation: MKAnnotation? {
     didSet {
       guard let mapItem = annotation as? Vehicle else { return }
