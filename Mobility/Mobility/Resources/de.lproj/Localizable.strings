@@ -1,0 +1,27 @@
+"global.action.add" = "Hinzufügen";
+
+"global.action.cancel" = "Abbrechen";
+
+"global.action.confirm" = "OK";
+
+"global.action.delete" = "Löschen";
+
+"global.action.done" = "Fertig";
+
+"global.action.login" = "Anmelden";
+
+"global.action.logout" = "Abmelden";
+
+"global.action.no" = "Nein";
+
+"global.action.understood" = "Verstanden!";
+
+"global.action.yes" = "Ja";
+
+"global.brand.papershift_cloud" = "Papershift Cloud";
+
+"global.title.error" = "Fehler";
+
+"global.title.password" = "Passwort";
+
+"global.title.success" = "Erfolgreich";
