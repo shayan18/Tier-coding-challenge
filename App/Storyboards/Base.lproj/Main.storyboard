@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-vV-Syv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="l3N-ZV-nca"/>
                                 </connections>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LZ4-37-aLi">
-                                <rect key="frame" x="103.5" y="811" width="207" height="32"/>
+                                <rect key="frame" x="72.5" y="801" width="248.5" height="32"/>
                                 <segments>
                                     <segment title="Standard"/>
-                                    <segment title="Satellite"/>
+                                    <segment title="Muted Standard"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="tintColor"/>
                                 <connections>
@@ -38,14 +38,20 @@
                                 <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
                                 <color key="color" systemColor="systemGroupedBackgroundColor"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS8-If-2XU">
-                                <rect key="frame" x="354" y="801.5" width="50" height="50"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS8-If-2XU">
+                                <rect key="frame" x="349" y="791.5" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="cje-Rh-dJq"/>
                                     <constraint firstAttribute="height" constant="50" id="znx-79-8ZN"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="location.circle.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closestVehiclePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Vn-Gq-x5z"/>
                                 </connections>
@@ -63,7 +69,7 @@
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -74,18 +80,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lFs-vV-Syv" secondAttribute="bottom" id="3GK-dX-XZg"/>
                             <constraint firstItem="lFs-vV-Syv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="44v-JX-yMN"/>
                             <constraint firstItem="tS8-If-2XU" firstAttribute="centerY" secondItem="LZ4-37-aLi" secondAttribute="centerY" id="ASo-rE-ujs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tS8-If-2XU" secondAttribute="trailing" constant="10" id="BCq-gT-Zq2"/>
-                            <constraint firstItem="LZ4-37-aLi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="C4k-nN-LjQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tS8-If-2XU" secondAttribute="trailing" constant="15" id="BCq-gT-Zq2"/>
+                            <constraint firstItem="LZ4-37-aLi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="C4k-nN-LjQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJw-FQ-QU3" secondAttribute="trailing" constant="20" id="LYb-rh-VLI"/>
                             <constraint firstItem="lFs-vV-Syv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fiV-mW-usQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFs-vV-Syv" secondAttribute="trailing" id="kDU-hF-JKl"/>
-                            <constraint firstItem="LZ4-37-aLi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kFO-gT-Sb6"/>
+                            <constraint firstItem="LZ4-37-aLi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.95" id="kFO-gT-Sb6"/>
                             <constraint firstItem="Bhh-5Q-HWM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lGV-6L-XIg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LZ4-37-aLi" secondAttribute="bottom" constant="20" id="m1j-uH-Dh1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LZ4-37-aLi" secondAttribute="bottom" constant="30" id="m1j-uH-Dh1"/>
                             <constraint firstItem="NJw-FQ-QU3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tmT-ZF-Uxr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lFs-vV-Syv" secondAttribute="bottom" id="xir-n8-kSg"/>
                             <constraint firstItem="Bhh-5Q-HWM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zDg-Vc-aaB"/>
                         </constraints>
                     </view>
@@ -110,37 +116,31 @@
                                 <rect key="frame" x="41.5" y="94.5" width="331" height="717"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VehicleType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCZ-Yg-ZlC">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="115.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="139.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VehicleType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5L-K9-A9c">
-                                        <rect key="frame" x="0.0" y="120.5" width="331" height="115"/>
+                                        <rect key="frame" x="0.0" y="144.5" width="331" height="139.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VehicleType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVS-qp-ouE">
-                                        <rect key="frame" x="0.0" y="240.5" width="331" height="115.5"/>
+                                        <rect key="frame" x="0.0" y="289" width="331" height="139"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VehicleType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3Y-5O-qIx">
-                                        <rect key="frame" x="0.0" y="361" width="331" height="115.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemIndigoColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VehicleType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ui-c9-BcI">
-                                        <rect key="frame" x="0.0" y="481.5" width="331" height="115"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VehicleType" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3Y-5O-qIx">
+                                        <rect key="frame" x="0.0" y="433" width="331" height="139.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VehicleType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekw-Pi-EaA">
-                                        <rect key="frame" x="0.0" y="601.5" width="331" height="115.5"/>
+                                        <rect key="frame" x="0.0" y="577.5" width="331" height="139.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
@@ -162,7 +162,6 @@
                         <outlet property="batteryLabel" destination="UVS-qp-ouE" id="dao-Ty-Yyq"/>
                         <outlet property="helmetAvailablityLabel" destination="Ekw-Pi-EaA" id="V5w-sy-v9i"/>
                         <outlet property="latLabel" destination="d3Y-5O-qIx" id="QCz-RB-Tnd"/>
-                        <outlet property="longLabel" destination="3Ui-c9-BcI" id="ehq-6j-qpX"/>
                         <outlet property="maxSpeedLabel" destination="x5L-K9-A9c" id="2yc-As-CRi"/>
                         <outlet property="typeLabel" destination="YCZ-Yg-ZlC" id="qxI-HQ-8P4"/>
                     </connections>

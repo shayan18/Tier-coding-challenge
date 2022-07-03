@@ -11,9 +11,9 @@ import ApiClient
 final class MapItemAnnotationView: MKAnnotationView {
   override var annotation: MKAnnotation? {
     didSet {
-      guard let mapItem = annotation as? MapItem else { return }
-      clusteringIdentifier = "MapItem"
-      image = mapItem.image
+      guard let mapItem = annotation as? Vehicle else { return }
+      clusteringIdentifier = "Vehicle"
+      image = mapItem.vehicleType.image
     }
   }
 }

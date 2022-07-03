@@ -68,7 +68,7 @@ private extension MapViewController {
     if sender.selectedSegmentIndex == 0 {
       mapView.mapType = .standard
     } else {
-      mapView.mapType = .satellite
+      mapView.mapType = .mutedStandard
     }
   }
 }
@@ -95,7 +95,7 @@ private extension MapViewController {
     viewModel.refreshVehicles = { [weak self] in
       guard let self = self else { return }
       for vehicle in self.viewModel.vehicles {
-        self.mapView.addAnnotation(MapItem(coordinate: vehicle.coordinate, vehicleType: vehicle.vehicleType))
+        self.mapView.addAnnotation(vehicle)
       }
 
       DispatchQueue.main.async {
@@ -108,10 +108,14 @@ private extension MapViewController {
 // MARK: MKMapView Delegates
 extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-    let vc = self.storyboard?.instantiateViewController(withIdentifier: "vehicleDetail") as! VehicleDetailViewController
-    vc.sheetPresentationController?.detents = [.medium()]
+    if let vehicle = view.annotation as? Vehicle {
 
-    vc.sheetPresentationController?.prefersGrabberVisible = true
-    //  self.present(vc, animated: true, completion: nil)
+      let vc = self.storyboard?.instantiateViewController(withIdentifier: "vehicleDetail") as! VehicleDetailViewController
+      vc.sheetPresentationController?.detents = [.medium()]
+      vc.viewModel = .init(data: vehicle)
+      vc.sheetPresentationController?.prefersGrabberVisible = true
+      self.present(vc, animated: true, completion: nil)
+    }
+
   }
 }
