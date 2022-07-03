@@ -14,8 +14,6 @@
 		E43A146C286F5D2600769369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43A146B286F5D2600769369 /* Assets.xcassets */; };
 		E43A146F286F5D2600769369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43A146D286F5D2600769369 /* LaunchScreen.storyboard */; };
 		E43A147A286F5D2600769369 /* MobilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1479286F5D2600769369 /* MobilityTests.swift */; };
-		E43A1484286F5D2600769369 /* MobilityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1483286F5D2600769369 /* MobilityUITests.swift */; };
-		E43A1486286F5D2600769369 /* MobilityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1485286F5D2600769369 /* MobilityUITestsLaunchTests.swift */; };
 		E43A1493286F63BC00769369 /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1492286F63BC00769369 /* VehicleService.swift */; };
 		E43A1496286F64A400769369 /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = E43A1495286F64A400769369 /* ApiClient */; };
 		E43A1498286F689500769369 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1497286F689500769369 /* MapViewModel.swift */; };
@@ -62,8 +60,6 @@
 		E43A1475286F5D2600769369 /* MobilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1479286F5D2600769369 /* MobilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilityTests.swift; sourceTree = "<group>"; };
 		E43A147F286F5D2600769369 /* MobilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E43A1483286F5D2600769369 /* MobilityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilityUITests.swift; sourceTree = "<group>"; };
-		E43A1485286F5D2600769369 /* MobilityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilityUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E43A1492286F63BC00769369 /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
 		E43A1497286F689500769369 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E4BBB1D228706904007FE8C1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -111,7 +107,6 @@
 			children = (
 				E43A1461286F5D2500769369 /* App */,
 				E43A1478286F5D2600769369 /* MobilityTests */,
-				E43A1482286F5D2600769369 /* MobilityUITests */,
 				E43A1460286F5D2500769369 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,15 +147,6 @@
 				E43A1479286F5D2600769369 /* MobilityTests.swift */,
 			);
 			path = MobilityTests;
-			sourceTree = "<group>";
-		};
-		E43A1482286F5D2600769369 /* MobilityUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E43A1483286F5D2600769369 /* MobilityUITests.swift */,
-				E43A1485286F5D2600769369 /* MobilityUITestsLaunchTests.swift */,
-			);
-			path = MobilityUITests;
 			sourceTree = "<group>";
 		};
 		E4F17F482870A09E00B863C7 /* Helper */ = {
@@ -372,8 +358,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43A1486286F5D2600769369 /* MobilityUITestsLaunchTests.swift in Sources */,
-				E43A1484286F5D2600769369 /* MobilityUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
