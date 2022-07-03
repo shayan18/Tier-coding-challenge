@@ -109,7 +109,7 @@
 		E43A1456286F5D2500769369 = {
 			isa = PBXGroup;
 			children = (
-				E43A1461286F5D2500769369 /* Mobility */,
+				E43A1461286F5D2500769369 /* App */,
 				E43A1478286F5D2600769369 /* MobilityTests */,
 				E43A1482286F5D2600769369 /* MobilityUITests */,
 				E43A1460286F5D2500769369 /* Products */,
@@ -126,7 +126,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E43A1461286F5D2500769369 /* Mobility */ = {
+		E43A1461286F5D2500769369 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				E4F17F5B2871AAE900B863C7 /* Resources */,
@@ -143,7 +143,7 @@
 				E43A146D286F5D2600769369 /* LaunchScreen.storyboard */,
 				E43A1470286F5D2600769369 /* Info.plist */,
 			);
-			path = Mobility;
+			path = App;
 			sourceTree = "<group>";
 		};
 		E43A1478286F5D2600769369 /* MobilityTests */ = {
@@ -535,7 +535,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4SXK89N4ZG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Mobility/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -563,7 +563,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4SXK89N4ZG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Mobility/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
