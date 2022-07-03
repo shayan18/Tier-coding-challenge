@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4016EAE2871B5C600F1E9D1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4016EAD2871B5C600F1E9D1 /* Colors.xcassets */; };
+		E4016EB02871B61A00F1E9D1 /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EAF2871B61900F1E9D1 /* BartyCrouch.swift */; };
+		E4016EB32871B6A600F1E9D1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EB22871B6A600F1E9D1 /* Assets.swift */; };
+		E4016EB52871B6C500F1E9D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EB42871B6C500F1E9D1 /* Strings.swift */; };
 		E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1462286F5D2500769369 /* AppDelegate.swift */; };
 		E43A1465286F5D2500769369 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1464286F5D2500769369 /* SceneDelegate.swift */; };
 		E43A1467286F5D2500769369 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1466286F5D2500769369 /* MapViewController.swift */; };
 		E43A146A286F5D2500769369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43A1468286F5D2500769369 /* Main.storyboard */; };
-		E43A146C286F5D2600769369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43A146B286F5D2600769369 /* Assets.xcassets */; };
+		E43A146C286F5D2600769369 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43A146B286F5D2600769369 /* Images.xcassets */; };
 		E43A146F286F5D2600769369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43A146D286F5D2600769369 /* LaunchScreen.storyboard */; };
 		E43A147A286F5D2600769369 /* MobilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1479286F5D2600769369 /* MobilityTests.swift */; };
 		E43A1493286F63BC00769369 /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1492286F63BC00769369 /* VehicleService.swift */; };
@@ -49,12 +53,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4016EAD2871B5C600F1E9D1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E4016EAF2871B61900F1E9D1 /* BartyCrouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
+		E4016EB22871B6A600F1E9D1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		E4016EB42871B6C500F1E9D1 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E43A145F286F5D2500769369 /* Mobility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1462286F5D2500769369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E43A1464286F5D2500769369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E43A1466286F5D2500769369 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E43A1469286F5D2500769369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E43A146B286F5D2600769369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E43A146B286F5D2600769369 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E43A146E286F5D2600769369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E43A1470286F5D2600769369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E43A1475286F5D2600769369 /* MobilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4016EB12871B66000F1E9D1 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				E4016EB22871B6A600F1E9D1 /* Assets.swift */,
+				E4016EB42871B6C500F1E9D1 /* Strings.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
 		E43A1456286F5D2500769369 = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +151,6 @@
 				E43A1497286F689500769369 /* MapViewModel.swift */,
 				E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */,
 				E43A1468286F5D2500769369 /* Main.storyboard */,
-				E43A146B286F5D2600769369 /* Assets.xcassets */,
 				E43A146D286F5D2600769369 /* LaunchScreen.storyboard */,
 				E43A1470286F5D2600769369 /* Info.plist */,
 			);
@@ -183,6 +199,10 @@
 		E4F17F5B2871AAE900B863C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E4016EB12871B66000F1E9D1 /* SwiftGen */,
+				E4016EAF2871B61900F1E9D1 /* BartyCrouch.swift */,
+				E43A146B286F5D2600769369 /* Images.xcassets */,
+				E4016EAD2871B5C600F1E9D1 /* Colors.xcassets */,
 				E4F17F5D2871AAFF00B863C7 /* de.lproj */,
 				E4F17F5C2871AAFF00B863C7 /* en.lproj */,
 			);
@@ -301,7 +321,8 @@
 			files = (
 				E4F17F5E2871AAFF00B863C7 /* en.lproj in Resources */,
 				E43A146F286F5D2600769369 /* LaunchScreen.storyboard in Resources */,
-				E43A146C286F5D2600769369 /* Assets.xcassets in Resources */,
+				E43A146C286F5D2600769369 /* Images.xcassets in Resources */,
+				E4016EAE2871B5C600F1E9D1 /* Colors.xcassets in Resources */,
 				E4F17F5F2871AAFF00B863C7 /* de.lproj in Resources */,
 				E43A146A286F5D2500769369 /* Main.storyboard in Resources */,
 			);
@@ -330,12 +351,15 @@
 			files = (
 				E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */,
 				E4F17F592870E57300B863C7 /* ColorExt.swift in Sources */,
+				E4016EB02871B61A00F1E9D1 /* BartyCrouch.swift in Sources */,
 				E4F17F552870BAC900B863C7 /* ClusterAnnotationView.swift in Sources */,
 				E4F17F4D2870A0FF00B863C7 /* Coordinator.swift in Sources */,
 				E43A1493286F63BC00769369 /* VehicleService.swift in Sources */,
+				E4016EB32871B6A600F1E9D1 /* Assets.swift in Sources */,
 				E4F17F472870A09100B863C7 /* StoryboardInitializable.swift in Sources */,
 				E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */,
 				E4F17F532870BA4900B863C7 /* MapItemAnnotationView.swift in Sources */,
+				E4016EB52871B6C500F1E9D1 /* Strings.swift in Sources */,
 				E43A1498286F689500769369 /* MapViewModel.swift in Sources */,
 				E4F17F512870A4F300B863C7 /* Extensions.swift in Sources */,
 				E4BBB1D328706904007FE8C1 /* LocationManager.swift in Sources */,
