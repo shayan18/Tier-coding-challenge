@@ -1,0 +1,68 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+
+env:
+  PROJECT_NAME: Mobility
+
+
+jobs:
+  cancel-previous-runs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel previous runs of this workflow on same branch
+        uses: rokroskar/workflow-run-cleanup-action@v0.2.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  tests:
+    runs-on: [self-hosted, macOS, arm64, MacStadium]
+
+    strategy:
+      matrix:
+        device:
+          - iPhone 13
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Clean Xcode build cache
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData
+
+      - name: Resolve Package Dependencies
+        run: arch -arm64 xcodebuild -resolvePackageDependencies
+
+      - name: Build & Run Tests
+        run: arch -arm64 xcodebuild test -scheme $PROJECT_NAME -destination 'platform=iOS Simulator,name=${{ matrix.device }},OS=latest' -disableAutomaticPackageResolution
+
+  code-coverage-report:
+    runs-on: [self-hosted, macOS, arm64, MacStadium]
+    needs: [tests]
+
+    strategy:
+      matrix:
+        device:
+          - iPhone 13
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Build & Run Tests
+        run: arch -arm64 xcodebuild test -project $PROJECT_NAME.xcodeproj -scheme $PROJECT_NAME -configuration Debug -destination 'platform=iOS Simulator,name=${{ matrix.device }},OS=latest' -enableCodeCoverage YES -derivedDataPath DerivedData
+
+      - uses: michaelhenry/swifty-code-coverage@v1.0.0
+        with:
+          build-path: DerivedData
+          target: $PROJECT_NAME.app
+          is-spm: false
+      - name: Publish to code climate
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.IOS_CODE_CLIMATE_REPORT_KEY }}
+        with:
+          coverageCommand: arch -arm64 xcodebuild test -scheme Mobility -destination "platform=iOS Simulator,name=${{ matrix.device }},OS=latest"  -enableCodeCoverage YES  -disableAutomaticPackageResolution
+          coverageLocations: |
+            coverage/lcov.info:lcov
