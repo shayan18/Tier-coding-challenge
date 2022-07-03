@@ -7,7 +7,7 @@ on:
       - hotfix/*
 
 env:
-  PROJECT_NAME: Terminal
+  PROJECT_NAME: Mobility
 
 jobs:
   cancel-previous-runs:
