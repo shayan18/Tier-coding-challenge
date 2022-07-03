@@ -1,0 +1,34 @@
+//
+//  MapItemAnnotationView.swift
+//  Mobility
+//
+//  Created by Shayan Ali on 02.07.22.
+//
+
+import MapKit
+import ApiClient
+
+final class MapItemAnnotationView: MKAnnotationView {
+  override var annotation: MKAnnotation? {
+    didSet {
+      guard let mapItem = annotation as? MapItem else { return }
+      
+      clusteringIdentifier = "MapItem"
+      image = mapItem.image
+    }
+  }
+}
+
+extension VehicleType {
+  var image: UIImage {
+    switch self {
+    case .escooter:
+      return #imageLiteral(resourceName: "scooter")
+    case .ebicycle:
+      return #imageLiteral(resourceName: "bike")
+    case .emoped:
+      return #imageLiteral(resourceName: "emob")
+    }
+  }
+}
+

@@ -11,9 +11,11 @@ import ApiClient
 
 protocol MapViewModelProtocol {
   var refreshVehicles: ( () -> Void )? { get set }
+  var vehicleLocations: [CLLocation] { get }
 }
 
 class MapViewModel: MapViewModelProtocol {
+  var vehicleLocations: [CLLocation] { vehicles.map { CLLocation(latitude: $0.lat, longitude: $0.lng) } }
   var refreshVehicles: (() -> Void)?
   var vehicles: [Vehicle] = []
 
