@@ -27,6 +27,11 @@ class MapViewModel: MapViewModelProtocol {
     vehicleService = service
   }
 
+  func closestVehicle(location: CLLocation?) -> CLLocation? {
+    guard let userLocation = location else { return nil }
+    return closestLocation(locations: vehicleLocations, closestToLocation:userLocation)
+  }
+
   func getVehicles() {
     updateState?(true)
     Task {
@@ -39,6 +44,16 @@ class MapViewModel: MapViewModelProtocol {
         showMessage?(error.localizedDescription)
         updateState?(false)
       }
+    }
+  }
+}
+
+extension MapViewModel {
+  func closestLocation(locations: [CLLocation], closestToLocation location: CLLocation) -> CLLocation? {
+    if let closestLocation = locations.min(by: { location.distance(from: $0) < location.distance(from: $1) }) {
+      return closestLocation
+    } else {
+      return nil
     }
   }
 }

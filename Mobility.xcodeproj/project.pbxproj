@@ -21,7 +21,6 @@
 		E43A1493286F63BC00769369 /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1492286F63BC00769369 /* VehicleService.swift */; };
 		E43A1496286F64A400769369 /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = E43A1495286F64A400769369 /* ApiClient */; };
 		E43A1498286F689500769369 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1497286F689500769369 /* MapViewModel.swift */; };
-		E4BBB1D328706904007FE8C1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1D228706904007FE8C1 /* LocationManager.swift */; };
 		E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */; };
 		E4F17F472870A09100B863C7 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */; };
 		E4F17F4D2870A0FF00B863C7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */; };
@@ -70,7 +69,6 @@
 		E43A147F286F5D2600769369 /* MobilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1492286F63BC00769369 /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
 		E43A1497286F689500769369 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		E4BBB1D228706904007FE8C1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
 		E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -119,6 +117,58 @@
 			path = SwiftGen;
 			sourceTree = "<group>";
 		};
+		E4016EB62871BD0C00F1E9D1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E43A1497286F689500769369 /* MapViewModel.swift */,
+				E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E4016EB72871BD1B00F1E9D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4F17F562870BE0D00B863C7 /* MapItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E4016EB82871BD2D00F1E9D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4F17F522870BA4900B863C7 /* MapItemAnnotationView.swift */,
+				E4F17F542870BAC900B863C7 /* ClusterAnnotationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4016EB92871BD5400F1E9D1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E43A146D286F5D2600769369 /* LaunchScreen.storyboard */,
+				E43A1468286F5D2500769369 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E4016EBA2871BD6300F1E9D1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E43A1492286F63BC00769369 /* VehicleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E4016EBB2871BD7000F1E9D1 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				E43A1464286F5D2500769369 /* SceneDelegate.swift */,
+				E43A1462286F5D2500769369 /* AppDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
 		E43A1456286F5D2500769369 = {
 			isa = PBXGroup;
 			children = (
@@ -141,17 +191,14 @@
 		E43A1461286F5D2500769369 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				E4F17F5B2871AAE900B863C7 /* Resources */,
-				E43A1462286F5D2500769369 /* AppDelegate.swift */,
-				E43A1464286F5D2500769369 /* SceneDelegate.swift */,
+				E4016EBB2871BD7000F1E9D1 /* AppDelegates */,
 				E4F17F492870A0A700B863C7 /* ViewController */,
+				E4016EB92871BD5400F1E9D1 /* Storyboards */,
 				E4F17F482870A09E00B863C7 /* Helper */,
-				E4BBB1D228706904007FE8C1 /* LocationManager.swift */,
-				E43A1492286F63BC00769369 /* VehicleService.swift */,
-				E43A1497286F689500769369 /* MapViewModel.swift */,
-				E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */,
-				E43A1468286F5D2500769369 /* Main.storyboard */,
-				E43A146D286F5D2600769369 /* LaunchScreen.storyboard */,
+				E4016EB62871BD0C00F1E9D1 /* ViewModels */,
+				E4016EB72871BD1B00F1E9D1 /* Models */,
+				E4F17F5B2871AAE900B863C7 /* Resources */,
+				E4016EBA2871BD6300F1E9D1 /* Services */,
 				E43A1470286F5D2600769369 /* Info.plist */,
 			);
 			path = App;
@@ -171,8 +218,7 @@
 				E4F17F462870A09100B863C7 /* StoryboardInitializable.swift */,
 				E4F17F4C2870A0FF00B863C7 /* Coordinator.swift */,
 				E4F17F502870A4F300B863C7 /* Extensions.swift */,
-				E4F17F522870BA4900B863C7 /* MapItemAnnotationView.swift */,
-				E4F17F542870BAC900B863C7 /* ClusterAnnotationView.swift */,
+				E4016EB82871BD2D00F1E9D1 /* Views */,
 				E4F17F5A2870E57600B863C7 /* Extensions */,
 			);
 			path = Helper;
@@ -182,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				E43A1466286F5D2500769369 /* MapViewController.swift */,
-				E4F17F562870BE0D00B863C7 /* MapItem.swift */,
 				E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */,
 			);
 			path = ViewController;
@@ -362,7 +407,6 @@
 				E4016EB52871B6C500F1E9D1 /* Strings.swift in Sources */,
 				E43A1498286F689500769369 /* MapViewModel.swift in Sources */,
 				E4F17F512870A4F300B863C7 /* Extensions.swift in Sources */,
-				E4BBB1D328706904007FE8C1 /* LocationManager.swift in Sources */,
 				E43A1467286F5D2500769369 /* MapViewController.swift in Sources */,
 				E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */,
 				E43A1465286F5D2500769369 /* SceneDelegate.swift in Sources */,
