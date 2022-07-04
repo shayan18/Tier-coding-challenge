@@ -28,29 +28,30 @@ class MapViewModel: MapViewModelProtocol {
     vehicleService = service
   }
 
-  func closestVehicle(location: CLLocation?) -> CLLocation? {
-    guard let userLocation = location else { return nil }
-    return closestLocation(locations: vehicleLocations, closestToLocation:userLocation)
-  }
-
   func getVehicles() {
     ongoingRequest?(true)
     Task {
       do {
         vehicles = try await vehicleService.vehicles()
         refreshVehicles?()
-        showMessage?("Vehicles fetched successfully")
+        showMessage?(AppConstants.defaultSuccessMessage)
         ongoingRequest?(false)
       } catch {
         let apiError: ApiError<VehicleError> = error as! ApiError<VehicleError>
-        showMessage?(AppError(error: apiError)?.title ?? "Something went wrong, please check your internet connection")
+        showMessage?(AppError(error: apiError)?.title ?? AppConstants.defaultFailureMessage)
         ongoingRequest?(false)
       }
     }
   }
+
+  func closestVehicle(location: CLLocation?) -> CLLocation? {
+    guard let userLocation = location else { return nil }
+    return closestLocation(locations: vehicleLocations, closestToLocation:userLocation)
+  }
 }
 
 extension MapViewModel {
+  ///Find closestest location in all locations from given location
   func closestLocation(locations: [CLLocation], closestToLocation location: CLLocation) -> CLLocation? {
     if let closestLocation = locations.min(by: { location.distance(from: $0) < location.distance(from: $1) }) {
       return closestLocation

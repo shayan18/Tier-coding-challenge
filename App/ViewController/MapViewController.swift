@@ -4,12 +4,11 @@
 //
 //  Created by Shayan Ali on 01.07.22.
 //
-
-import UIKit
-import MapKit
-import CoreLocation
 import ApiClient
+import CoreLocation
+import MapKit
 import Toast
+import UIKit
 
 final class MapViewController: UIViewController {
   // MARK: Outlets
@@ -114,7 +113,6 @@ private extension MapViewController {
 // MARK: MKMapView Delegates
 extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-
     if let vehicle = view.annotation as? Vehicle {
       self.mapView.setCenter(vehicle.coordinate, animated: true)
       showVehicleDetailView(vehicle: vehicle)

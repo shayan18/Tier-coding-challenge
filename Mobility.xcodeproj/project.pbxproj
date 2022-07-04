@@ -180,12 +180,28 @@
 		E4016ED72871DEAE00F1E9D1 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				E4016ECA2871CFD900F1E9D1 /* TestConstants.swift */,
-				E4016ED02871D18F00F1E9D1 /* DataExt.swift */,
-				E4016ECE2871D16D00F1E9D1 /* MockedJson.swift */,
-				E4016ECC2871D13B00F1E9D1 /* VehicleEndPointExt.swift */,
+				E4016EEA2872E7EC00F1E9D1 /* Shared */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		E4016EEA2872E7EC00F1E9D1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E4016ECC2871D13B00F1E9D1 /* VehicleEndPointExt.swift */,
+				E4016ECE2871D16D00F1E9D1 /* MockedJson.swift */,
+				E4016ECA2871CFD900F1E9D1 /* TestConstants.swift */,
+				E4016ED02871D18F00F1E9D1 /* DataExt.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E4016EEB2872E7FC00F1E9D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4016ED22871D24900F1E9D1 /* Vehicles.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E43A1456286F5D2500769369 = {
@@ -226,7 +242,7 @@
 		E43A1478286F5D2600769369 /* MobilityTests */ = {
 			isa = PBXGroup;
 			children = (
-				E4016ED22871D24900F1E9D1 /* Vehicles.json */,
+				E4016EEB2872E7FC00F1E9D1 /* Resources */,
 				E4016ED72871DEAE00F1E9D1 /* Global */,
 				E4016EC52871CEFC00F1E9D1 /* MapViewModelTests.swift */,
 			);

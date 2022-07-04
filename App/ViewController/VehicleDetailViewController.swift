@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VehicleDetailViewController: UIViewController {
+final class VehicleDetailViewController: UIViewController {
   @IBOutlet private weak var batteryLabel: UILabel!
   @IBOutlet private weak var latLabel: UILabel!
   @IBOutlet private weak var maxSpeedLabel: UILabel!
