@@ -22,11 +22,11 @@ extension VehicleType {
   var image: UIImage {
     switch self {
     case .escooter:
-      return #imageLiteral(resourceName: "scooter")
+      return Asset.Images.scooter.image
     case .ebicycle:
-      return #imageLiteral(resourceName: "bike")
+      return Asset.Images.bike.image
     case .emoped:
-      return #imageLiteral(resourceName: "emob")
+      return Asset.Images.emob.image
     }
   }
 }

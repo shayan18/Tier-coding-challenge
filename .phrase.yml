@@ -3,11 +3,11 @@ phrase:
   project_id: 5a6d7817dd6d7626be818ec2f13262e1
   push:
     sources:
-    - file: ./App/<locale_code>.lproj/Localizable.strings
+    - file: ./App/Resources/<locale_code>.lproj/Localizable.strings
       params:
         file_format: strings
   pull:
     targets:
-    - file: ./App/<locale_code>.lproj/Localizable.strings
+    - file: ./App/Resources/<locale_code>.lproj/Localizable.strings
       params:
         file_format: strings

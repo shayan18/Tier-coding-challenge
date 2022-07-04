@@ -18,10 +18,12 @@
 
 "global.action.yes" = "Yes";
 
-"global.brand.papershift_cloud" = "Papershift Cloud";
-
 "global.title.error" = "Error";
 
 "global.title.password" = "Password";
 
 "global.title.success" = "Success";
+
+"Vehicle.request.error" = "Something went wrong, please check your internet connection";
+
+"Vehicle.request.success" = "Vehicles fetched successfully";

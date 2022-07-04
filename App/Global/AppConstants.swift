@@ -19,10 +19,4 @@ enum AppConstants {
 
   /// Default duration for hiding toast messages after being presented.
   static let defaultToastDuration: Double = 3.0
-
-  /// Default success response message for requests
-  static let defaultSuccessMessage: String = "Vehicles fetched successfully"
-
-  /// Default failure response message for requests
-  static let defaultFailureMessage: String = "Something went wrong, please check your internet connection"
 }

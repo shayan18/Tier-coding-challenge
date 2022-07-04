@@ -34,11 +34,11 @@ class MapViewModel: MapViewModelProtocol {
       do {
         vehicles = try await vehicleService.vehicles()
         refreshVehicles?()
-        showMessage?(AppConstants.defaultSuccessMessage)
+        showMessage?(L10n.Vehicle.Request.success)
         ongoingRequest?(false)
       } catch {
         let apiError: ApiError<VehicleError> = error as! ApiError<VehicleError>
-        showMessage?(AppError(error: apiError)?.title ?? AppConstants.defaultFailureMessage)
+        showMessage?(AppError(error: apiError)?.title ?? L10n.Vehicle.Request.error)
         ongoingRequest?(false)
       }
     }

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		E4016EAE2871B5C600F1E9D1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4016EAD2871B5C600F1E9D1 /* Colors.xcassets */; };
 		E4016EB02871B61A00F1E9D1 /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EAF2871B61900F1E9D1 /* BartyCrouch.swift */; };
-		E4016EB32871B6A600F1E9D1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EB22871B6A600F1E9D1 /* Assets.swift */; };
-		E4016EB52871B6C500F1E9D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EB42871B6C500F1E9D1 /* Strings.swift */; };
 		E4016EBE2871C0BB00F1E9D1 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = E4016EBD2871C0BB00F1E9D1 /* Toast */; };
 		E4016EC02871C1EC00F1E9D1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EBF2871C1EC00F1E9D1 /* AppConstants.swift */; };
 		E4016EC22871C4D300F1E9D1 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EC12871C4D300F1E9D1 /* StringExt.swift */; };
@@ -34,6 +32,9 @@
 		E43A1493286F63BC00769369 /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1492286F63BC00769369 /* VehicleService.swift */; };
 		E43A1496286F64A400769369 /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = E43A1495286F64A400769369 /* ApiClient */; };
 		E43A1498286F689500769369 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1497286F689500769369 /* MapViewModel.swift */; };
+		E4C40BB5287322A300C82F00 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C40BB2287322A300C82F00 /* Storyboards.swift */; };
+		E4C40BB6287322A300C82F00 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C40BB3287322A300C82F00 /* Assets.swift */; };
+		E4C40BB7287322A300C82F00 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C40BB4287322A300C82F00 /* Strings.swift */; };
 		E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */; };
 		E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */; };
 		E4F17F532870BA4900B863C7 /* VehicleAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */; };
@@ -62,8 +63,6 @@
 /* Begin PBXFileReference section */
 		E4016EAD2871B5C600F1E9D1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E4016EAF2871B61900F1E9D1 /* BartyCrouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
-		E4016EB22871B6A600F1E9D1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		E4016EB42871B6C500F1E9D1 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E4016EBF2871C1EC00F1E9D1 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		E4016EC12871C4D300F1E9D1 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		E4016EC32871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGraphicsImageRendererExt.swift; sourceTree = "<group>"; };
@@ -89,6 +88,9 @@
 		E43A147F286F5D2600769369 /* MobilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1492286F63BC00769369 /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
 		E43A1497286F689500769369 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		E4C40BB2287322A300C82F00 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		E4C40BB3287322A300C82F00 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		E4C40BB4287322A300C82F00 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
 		E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
 		E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotationView.swift; sourceTree = "<group>"; };
@@ -124,15 +126,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E4016EB12871B66000F1E9D1 /* SwiftGen */ = {
-			isa = PBXGroup;
-			children = (
-				E4016EB22871B6A600F1E9D1 /* Assets.swift */,
-				E4016EB42871B6C500F1E9D1 /* Strings.swift */,
-			);
-			path = SwiftGen;
-			sourceTree = "<group>";
-		};
 		E4016EB62871BD0C00F1E9D1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +227,7 @@
 				E4F17F482870A09E00B863C7 /* Global */,
 				E4F17F5B2871AAE900B863C7 /* Resources */,
 				E4016EBA2871BD6300F1E9D1 /* Services */,
+				E4C40BB02873229000C82F00 /* Generated */,
 				E43A1470286F5D2600769369 /* Info.plist */,
 			);
 			path = App;
@@ -247,6 +241,24 @@
 				E4016EC52871CEFC00F1E9D1 /* MapViewModelTests.swift */,
 			);
 			path = MobilityTests;
+			sourceTree = "<group>";
+		};
+		E4C40BB02873229000C82F00 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E4C40BB12873229900C82F00 /* SwiftGen */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		E4C40BB12873229900C82F00 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				E4C40BB3287322A300C82F00 /* Assets.swift */,
+				E4C40BB2287322A300C82F00 /* Storyboards.swift */,
+				E4C40BB4287322A300C82F00 /* Strings.swift */,
+			);
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		E4F17F482870A09E00B863C7 /* Global */ = {
@@ -283,7 +295,6 @@
 		E4F17F5B2871AAE900B863C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E4016EB12871B66000F1E9D1 /* SwiftGen */,
 				E4016EAF2871B61900F1E9D1 /* BartyCrouch.swift */,
 				E43A146B286F5D2600769369 /* Images.xcassets */,
 				E4016EAD2871B5C600F1E9D1 /* Colors.xcassets */,
@@ -438,17 +449,18 @@
 			files = (
 				E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */,
 				E4016EC22871C4D300F1E9D1 /* StringExt.swift in Sources */,
+				E4C40BB7287322A300C82F00 /* Strings.swift in Sources */,
+				E4C40BB6287322A300C82F00 /* Assets.swift in Sources */,
 				E4016EE92872DF9E00F1E9D1 /* AppError.swift in Sources */,
 				E4016EC02871C1EC00F1E9D1 /* AppConstants.swift in Sources */,
 				E4016EB02871B61A00F1E9D1 /* BartyCrouch.swift in Sources */,
 				E4016EC42871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift in Sources */,
+				E4C40BB5287322A300C82F00 /* Storyboards.swift in Sources */,
 				E4F17F552870BAC900B863C7 /* ClusterAnnotationView.swift in Sources */,
 				E43A1493286F63BC00769369 /* VehicleService.swift in Sources */,
-				E4016EB32871B6A600F1E9D1 /* Assets.swift in Sources */,
 				E4016EDE28720F2C00F1E9D1 /* UIViewControllerExt.swift in Sources */,
 				E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */,
 				E4F17F532870BA4900B863C7 /* VehicleAnnotationView.swift in Sources */,
-				E4016EB52871B6C500F1E9D1 /* Strings.swift in Sources */,
 				E4016ED62871D44000F1E9D1 /* AppEnv.swift in Sources */,
 				E43A1498286F689500769369 /* MapViewModel.swift in Sources */,
 				E43A1467286F5D2500769369 /* MapViewController.swift in Sources */,
