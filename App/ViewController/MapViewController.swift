@@ -56,7 +56,7 @@ private extension MapViewController {
   }
 
   private func showVehicleDetailView(vehicle: Vehicle) {
-    let vehicleDetailVC = VehicleDetailViewController.instantiate()
+    let vehicleDetailVC: VehicleDetailViewController = VehicleDetailViewController.instantiateViewController()
     vehicleDetailVC.viewModel = .init(vehicle: vehicle)
     vehicleDetailVC.sheetPresentationController?.detents = [.medium()]
     vehicleDetailVC.sheetPresentationController?.prefersGrabberVisible = true
@@ -82,10 +82,10 @@ private extension MapViewController {
 private extension MapViewController {
   func viewModelOutputs() {
     viewModel.ongoingRequest = { [weak self] status in
-      if status {
-        self?.activityIndicator.startAnimating()
-      } else {
-        DispatchQueue.main.async {
+      DispatchQueue.main.async {
+        if status {
+          self?.activityIndicator.startAnimating()
+        } else {
           self?.activityIndicator.stopAnimating()
         }
       }
@@ -114,7 +114,9 @@ private extension MapViewController {
 // MARK: MKMapView Delegates
 extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+
     if let vehicle = view.annotation as? Vehicle {
+      self.mapView.setCenter(vehicle.coordinate, animated: true)
       showVehicleDetailView(vehicle: vehicle)
     }
   }
