@@ -24,6 +24,7 @@
 		E4016ED62871D44000F1E9D1 /* AppEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016ED42871D42B00F1E9D1 /* AppEnv.swift */; };
 		E4016EDE28720F2C00F1E9D1 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EDB28720EC800F1E9D1 /* UIViewControllerExt.swift */; };
 		E4016EE128721E2E00F1E9D1 /* NSObjectExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EE028721E2E00F1E9D1 /* NSObjectExt.swift */; };
+		E4016EE92872DF9E00F1E9D1 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4016EE82872DF9E00F1E9D1 /* AppError.swift */; };
 		E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1462286F5D2500769369 /* AppDelegate.swift */; };
 		E43A1465286F5D2500769369 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1464286F5D2500769369 /* SceneDelegate.swift */; };
 		E43A1467286F5D2500769369 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A1466286F5D2500769369 /* MapViewController.swift */; };
@@ -75,6 +76,7 @@
 		E4016ED42871D42B00F1E9D1 /* AppEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnv.swift; sourceTree = "<group>"; };
 		E4016EDB28720EC800F1E9D1 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		E4016EE028721E2E00F1E9D1 /* NSObjectExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExt.swift; sourceTree = "<group>"; };
+		E4016EE82872DF9E00F1E9D1 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		E43A145F286F5D2500769369 /* Mobility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A1462286F5D2500769369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E43A1464286F5D2500769369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				E4016ED42871D42B00F1E9D1 /* AppEnv.swift */,
+				E4016EE82872DF9E00F1E9D1 /* AppError.swift */,
 				E4016EBF2871C1EC00F1E9D1 /* AppConstants.swift */,
 				E4F17F5A2870E57600B863C7 /* Extensions */,
 			);
@@ -419,6 +422,7 @@
 			files = (
 				E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */,
 				E4016EC22871C4D300F1E9D1 /* StringExt.swift in Sources */,
+				E4016EE92872DF9E00F1E9D1 /* AppError.swift in Sources */,
 				E4016EC02871C1EC00F1E9D1 /* AppConstants.swift in Sources */,
 				E4016EB02871B61A00F1E9D1 /* BartyCrouch.swift in Sources */,
 				E4016EC42871C50200F1E9D1 /* UIGraphicsImageRendererExt.swift in Sources */,

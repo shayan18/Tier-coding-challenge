@@ -5,9 +5,10 @@
 //  Created by Shayan Ali on 01.07.22.
 //
 
-import Foundation
-import CoreLocation
 import ApiClient
+import CoreLocation
+import Foundation
+import Microya
 
 protocol MapViewModelProtocol {
   var refreshVehicles: ( () -> Void )? { get set }
@@ -41,7 +42,8 @@ class MapViewModel: MapViewModelProtocol {
         showMessage?("Vehicles fetched successfully")
         ongoingRequest?(false)
       } catch {
-        showMessage?(error.localizedDescription)
+        let apiError: ApiError<VehicleError> = error as! ApiError<VehicleError>
+        showMessage?(AppError(error: apiError)?.title ?? "Something went wrong, please check your internet connection")
         ongoingRequest?(false)
       }
     }
