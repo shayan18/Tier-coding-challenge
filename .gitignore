@@ -92,3 +92,4 @@ iOSInjectionProject/
 # General
 .DS_Store
 
+App/Secrets/secrets.json

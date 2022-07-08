@@ -38,6 +38,7 @@
 		E4C40BB7287322A300C82F00 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C40BB4287322A300C82F00 /* Strings.swift */; };
 		E4E2041E287866730039E49C /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2041D287866730039E49C /* Secrets.swift */; };
 		E4E20420287866940039E49C /* secrets.json.sample in Resources */ = {isa = PBXBuildFile; fileRef = E4E2041F287866940039E49C /* secrets.json.sample */; };
+		E4E20422287867A30039E49C /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = E4E20421287867A30039E49C /* secrets.json */; };
 		E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */; };
 		E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */; };
 		E4F17F532870BA4900B863C7 /* VehicleAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */; };
@@ -97,6 +98,7 @@
 		E4C40BB4287322A300C82F00 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E4E2041D287866730039E49C /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		E4E2041F287866940039E49C /* secrets.json.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secrets.json.sample; sourceTree = "<group>"; };
+		E4E20421287867A30039E49C /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
 		E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
 		E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotationView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E2041F287866940039E49C /* secrets.json.sample */,
+				E4E20421287867A30039E49C /* secrets.json */,
 				E4E2041D287866730039E49C /* Secrets.swift */,
 			);
 			path = Secrets;
@@ -438,6 +441,7 @@
 				E43A146C286F5D2600769369 /* Images.xcassets in Resources */,
 				E4016EAE2871B5C600F1E9D1 /* Colors.xcassets in Resources */,
 				E4F17F5F2871AAFF00B863C7 /* de.lproj in Resources */,
+				E4E20422287867A30039E49C /* secrets.json in Resources */,
 				E43A146A286F5D2500769369 /* Main.storyboard in Resources */,
 				E4E20420287866940039E49C /* secrets.json.sample in Resources */,
 			);

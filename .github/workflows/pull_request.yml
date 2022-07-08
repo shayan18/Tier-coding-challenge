@@ -30,6 +30,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Setup secrets.json
+        run: |
+          echo '
+          {
+          "apiKey": "${{ secrets.REQUEST_API_KEY}}"
+          }
+          ' >> App/Sources/Secrets/secrets.json
+
       - name: Clean Xcode build cache
         run: rm -rf ~/Library/Developer/Xcode/DerivedData
 
@@ -41,7 +49,7 @@ jobs:
 
   code-coverage-report:
     runs-on: [self-hosted, macOS, arm64, MacStadium]
-    needs: [linters, tests]
+    needs: [tests]
 
     strategy:
       matrix:
@@ -50,6 +58,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+
+      - name: Setup secrets.json
+        run: |
+          echo '
+          {
+          "apiKey": "${{ secrets.REQUEST_API_KEY}}"
+          }
+          ' >> App/Sources/Secrets/secrets.json
 
       - name: Build & Run Tests
         run: arch -arm64 xcodebuild test -project $PROJECT_NAME.xcodeproj -scheme $PROJECT_NAME -configuration Debug -destination 'platform=iOS Simulator,name=${{ matrix.device }},OS=latest' -enableCodeCoverage YES -derivedDataPath DerivedData
@@ -69,7 +85,7 @@ jobs:
 
   testflight-deploy:
     runs-on: [self-hosted, macOS, arm64, MacStadium]
-    needs: [linters]
+    needs: [tests]
 
     steps:
       - uses: actions/checkout@v2

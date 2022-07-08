@@ -10,7 +10,7 @@ import Foundation
 import Microya
 
 protocol VehicleProvidable {
-  func vehicles() async throws -> [Vehicle]
+  func vehicles(apiKey: String) async throws -> [Vehicle]
 }
 
 struct VehicleService: VehicleProvidable {
@@ -20,8 +20,8 @@ struct VehicleService: VehicleProvidable {
     self.provider = provider
   }
 
-  func vehicles() async throws -> [Vehicle] {
-    let result = await provider.response(on: .vehicle(apiKey: AppConstants.apiKey), decodeBodyTo: ApiCollectionResponse<Vehicle>.self)
+  func vehicles(apiKey: String) async throws -> [Vehicle] {
+    let result = await provider.response(on: .vehicle(apiKey: apiKey), decodeBodyTo: ApiCollectionResponse<Vehicle>.self)
 
     switch result {
     case let .success(vehicleResponse):
