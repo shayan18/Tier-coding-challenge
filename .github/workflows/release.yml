@@ -30,6 +30,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Setup secrets.json
+        run: |
+            echo '
+            {
+            "apiKey": "${{ secrets.REQUEST_API_KEY}}"
+            }
+            ' >> App/Sources/Secrets/secrets.json
+
       - name: Clean Xcode build cache
         run: rm -rf ~/Library/Developer/Xcode/DerivedData
 
