@@ -32,7 +32,8 @@ class MapViewModel: MapViewModelProtocol {
     ongoingRequest?(true)
     Task {
       do {
-        vehicles = try await vehicleService.vehicles()
+        let apiKey = try! Secrets.load().apiKey
+        vehicles = try await vehicleService.vehicles(apiKey: apiKey)
         refreshVehicles?()
         showMessage?(L10n.Vehicle.Request.success)
         ongoingRequest?(false)
