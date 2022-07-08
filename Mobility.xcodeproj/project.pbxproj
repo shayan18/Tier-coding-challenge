@@ -36,6 +36,8 @@
 		E4C40BB5287322A300C82F00 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C40BB2287322A300C82F00 /* Storyboards.swift */; };
 		E4C40BB6287322A300C82F00 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C40BB3287322A300C82F00 /* Assets.swift */; };
 		E4C40BB7287322A300C82F00 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C40BB4287322A300C82F00 /* Strings.swift */; };
+		E4E2041E287866730039E49C /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2041D287866730039E49C /* Secrets.swift */; };
+		E4E20420287866940039E49C /* secrets.json.sample in Resources */ = {isa = PBXBuildFile; fileRef = E4E2041F287866940039E49C /* secrets.json.sample */; };
 		E4F17F45287098D400B863C7 /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */; };
 		E4F17F4F2870A15600B863C7 /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */; };
 		E4F17F532870BA4900B863C7 /* VehicleAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */; };
@@ -93,6 +95,8 @@
 		E4C40BB2287322A300C82F00 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		E4C40BB3287322A300C82F00 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		E4C40BB4287322A300C82F00 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E4E2041D287866730039E49C /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		E4E2041F287866940039E49C /* secrets.json.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secrets.json.sample; sourceTree = "<group>"; };
 		E4F17F44287098D400B863C7 /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
 		E4F17F4E2870A15600B863C7 /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
 		E4F17F522870BA4900B863C7 /* VehicleAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotationView.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 				E4016EB62871BD0C00F1E9D1 /* ViewModels */,
 				E4016EB82871BD2D00F1E9D1 /* Views */,
 				E4F17F482870A09E00B863C7 /* Global */,
+				E4E2041C287866300039E49C /* Secrets */,
 				E4F17F5A2870E57600B863C7 /* Extensions */,
 				E4F17F5B2871AAE900B863C7 /* Resources */,
 				E4016EBA2871BD6300F1E9D1 /* Services */,
@@ -262,6 +267,15 @@
 				E4C40BB4287322A300C82F00 /* Strings.swift */,
 			);
 			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		E4E2041C287866300039E49C /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				E4E2041F287866940039E49C /* secrets.json.sample */,
+				E4E2041D287866730039E49C /* Secrets.swift */,
+			);
+			path = Secrets;
 			sourceTree = "<group>";
 		};
 		E4F17F482870A09E00B863C7 /* Global */ = {
@@ -425,6 +439,7 @@
 				E4016EAE2871B5C600F1E9D1 /* Colors.xcassets in Resources */,
 				E4F17F5F2871AAFF00B863C7 /* de.lproj in Resources */,
 				E43A146A286F5D2500769369 /* Main.storyboard in Resources */,
+				E4E20420287866940039E49C /* secrets.json.sample in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +481,7 @@
 				E4F17F532870BA4900B863C7 /* VehicleAnnotationView.swift in Sources */,
 				E4016ED62871D44000F1E9D1 /* AppEnv.swift in Sources */,
 				E43A1498286F689500769369 /* MapViewModel.swift in Sources */,
+				E4E2041E287866730039E49C /* Secrets.swift in Sources */,
 				E43A1467286F5D2500769369 /* MapViewController.swift in Sources */,
 				E43A1463286F5D2500769369 /* AppDelegate.swift in Sources */,
 				E4BF62512878453400FFAA8A /* VehicleTypeExt.swift in Sources */,
