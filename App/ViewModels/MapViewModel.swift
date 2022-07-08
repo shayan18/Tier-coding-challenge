@@ -25,7 +25,7 @@ class MapViewModel: MapViewModelProtocol {
   private let vehicleService: VehicleService
 
   init(service: VehicleService) {
-    vehicleService = service
+    self.vehicleService = service
   }
 
   func getVehicles() {
@@ -47,6 +47,14 @@ class MapViewModel: MapViewModelProtocol {
   func closestVehicle(location: CLLocation?) -> CLLocation? {
     guard let userLocation = location else { return nil }
     return closestLocation(locations: vehicleLocations, closestToLocation:userLocation)
+  }
+
+  func configureUserLocation(location: CLLocationManager) {
+    location.requestWhenInUseAuthorization()
+    if CLLocationManager.locationServicesEnabled() {
+      location.desiredAccuracy = kCLLocationAccuracyBest
+      location.startUpdatingLocation()
+    }
   }
 }
 

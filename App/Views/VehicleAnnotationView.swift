@@ -18,16 +18,3 @@ final class VehicleAnnotationView: MKAnnotationView {
   }
 }
 
-extension VehicleType {
-  var image: UIImage {
-    switch self {
-    case .escooter:
-      return Asset.Images.scooter.image
-    case .ebicycle:
-      return Asset.Images.bike.image
-    case .emoped:
-      return Asset.Images.emob.image
-    }
-  }
-}
-

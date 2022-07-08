@@ -20,9 +20,9 @@ final class MapViewController: UIViewController {
   private let viewModel = MapViewModel(service: .init(provider: AppEnv.apiProvider))
   override func viewDidLoad() {
     super.viewDidLoad()
-    configureUserLocation()
     configureMapView()
     viewModel.getVehicles()
+    viewModel.configureUserLocation(location: locationManager)
     viewModelOutputs()
   }
 }
@@ -37,14 +37,6 @@ private extension MapViewController {
     mapView.register(
       ClusterAnnotationView.self,
       forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
-  }
-
-  func configureUserLocation() {
-    locationManager.requestWhenInUseAuthorization()
-    if CLLocationManager.locationServicesEnabled() {
-      locationManager.desiredAccuracy = kCLLocationAccuracyBest
-      locationManager.startUpdatingLocation()
-    }
   }
 
   func SetupMapLocation(location: CLLocation?) {
@@ -81,11 +73,12 @@ private extension MapViewController {
 private extension MapViewController {
   func viewModelOutputs() {
     viewModel.ongoingRequest = { [weak self] status in
+      guard let self = self else { return }
       DispatchQueue.main.async {
         if status {
-          self?.activityIndicator.startAnimating()
+          self.activityIndicator.startAnimating()
         } else {
-          self?.activityIndicator.stopAnimating()
+          self.activityIndicator.stopAnimating()
         }
       }
     }

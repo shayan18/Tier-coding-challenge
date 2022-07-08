@@ -27,8 +27,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      codeCoverageEnabled = "YES">
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -36,6 +35,13 @@
             BuildableName = "Mobility.app"
             BlueprintName = "Mobility"
             ReferencedContainer = "container:Mobility.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "ApiClient"
+            BuildableName = "ApiClient"
+            BlueprintName = "ApiClient"
+            ReferencedContainer = "container:../Library/Developer/Xcode/DerivedData/Mobility-bnnmpmxkydlpfbcxjviwcttaantn/SourcePackages/checkouts/ApiClient-iOS">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
